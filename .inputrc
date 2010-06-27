@@ -1,0 +1,18 @@
+#
+# kuozumi .inputrc $Id$
+#
+
+# key bind
+set editing-mode vi
+
+# beep off
+set bell-style none
+
+# ディレクトリ名の補完時に最後にスラッシュ「/」がつく
+set mark-directories on
+
+# 複数の補完候補があったら、Tabを一回押しで補完候補の一覧を表示する
+set show-all-if-ambiguous on
+
+# 補完時の大文字・小文字を無視
+set completion-ignore-case on
