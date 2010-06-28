@@ -12,6 +12,7 @@ highlight SpecialKey ctermbg=white ctermfg=black
 highlight Function ctermfg=blue
 highlight Search ctermfg=black ctermbg=yellow cterm=bold,underline
 highlight StatusLine cterm=bold,reverse ctermfg=blue ctermbg=white
+"highlight StatusLine cterm=bold,reverse ctermbg=white
 
 "------------------------------------------------------------------------
 " PHP
@@ -23,9 +24,16 @@ au BufNewFile,BufRead *.ctp   :set ft=php
 " perl
 au BufNewFile,BufRead *.cgi   :set ft=perl
 au BufNewFile,BufRead *.pl    :set ft=perl
+au BufNewFile,BufRead *.pm    :set ft=perl
 "------------------------------------------------------------------------
 " sql
 au BufNewFile,BufRead *.SQL   :set ft=sql
+"------------------------------------------------------------------------
+" snippetsEmu 関連 環境変数としてシグネチャを記述
+let AUTHOR = 'Keisuke Uozumi'
+let MAILADDRESS = 'eroejp@gmail.com'
+let COPYRIGHT = 'Keisuke Uozumi'
+
 "------------------------------------------------------------------------
 " autocomplpop.vim 関連
 " Tab化の設定は行わないこと。snippetsがTabでやってるじゃん。
