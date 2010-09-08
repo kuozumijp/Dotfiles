@@ -1,4 +1,7 @@
-"kuozumi .vimrc $Id$
+"
+" kuozumijp .vimrc $Id$
+"
+
 syntax on
 filetype plugin on
 
