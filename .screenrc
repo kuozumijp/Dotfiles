@@ -1,0 +1,28 @@
+#
+# kuozumijp .screenrc $Id$
+#
+
+# status
+hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
+
+# window resize off
+termcapinfo vt100 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+defscrollback 10000
+autodetach on
+startup_message off
+term vt100
+shell -$SHELL
+shelltitle "$ |bash"
+
+# Escape default:Ctrl-a
+escape ^z^z
+
+# key binds
+bind u eval 'encoding utf8' 'info'
+bind ^U eval 'encoding utf8' 'info'
+bind e eval 'encoding eucjp' 'info'
+bind ^E eval 'encoding eucjp' 'info'
+bind m prev
+bind ^M prev
