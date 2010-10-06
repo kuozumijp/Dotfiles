@@ -24,5 +24,5 @@ bind u eval 'encoding utf8' 'info'
 bind ^U eval 'encoding utf8' 'info'
 bind e eval 'encoding eucjp' 'info'
 bind ^E eval 'encoding eucjp' 'info'
-bind m prev
-bind ^M prev
+bind b prev
+bind ^B prev
