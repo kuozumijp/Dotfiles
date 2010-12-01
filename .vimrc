@@ -16,6 +16,9 @@ highlight Function ctermfg=blue
 highlight Search ctermfg=black ctermbg=yellow cterm=bold,underline
 highlight StatusLine cterm=bold,reverse ctermfg=blue ctermbg=white
 "highlight StatusLine cterm=bold,reverse ctermbg=white
+highlight TabLine term=bold cterm=bold ctermfg=black ctermbg=white
+highlight TabLineSel term=bold cterm=bold ctermfg=red ctermbg=black
+highlight TabLineFill ctermfg=white
 
 "------------------------------------------------------------------------
 " PHP
@@ -56,11 +59,30 @@ highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
 "------------------------------------------------------------------------
+" vimtab関連
+if has('mac')
+  nnoremap <C-t> :tabedit<Return>
+  nnoremap <C-w> :tabclose<Return>
+  nnoremap <C-r> gt
+  nnoremap <C-s> gT
+else
+  nnoremap <C-t> :tabedit<Return>
+  nnoremap <C-w> :tabclose<Return>
+  nnoremap <C-r> gt
+  nnoremap <C-Tab> gt
+  nnoremap <C-s> gT
+  nnoremap <C-S-Tab> gT
+endif
+
+"------------------------------------------------------------------------
 " perlの時は#の対応の為、自動改行無し
 " 挿入モードで改行した時
 " ノーマルモードで o や O をした時
 autocmd FileType perl :set formatoptions-=r
 autocmd FileType perl :set formatoptions-=o
+
+" タブバーを常に表示する
+set showtabline=2
 
 " ステータスラインを常に表示する 
 set laststatus=2
