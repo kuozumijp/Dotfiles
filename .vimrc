@@ -64,13 +64,13 @@ if has('mac')
   nnoremap <C-t> :tabedit<Return>
   nnoremap <C-w> :tabclose<Return>
   nnoremap <C-r> gt
-  nnoremap <C-s> gT
+  nnoremap <C-e> gT
 else
   nnoremap <C-t> :tabedit<Return>
   nnoremap <C-w> :tabclose<Return>
   nnoremap <C-r> gt
   nnoremap <C-Tab> gt
-  nnoremap <C-s> gT
+  nnoremap <C-e> gT
   nnoremap <C-S-Tab> gT
 endif
 
