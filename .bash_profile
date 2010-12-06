@@ -68,7 +68,6 @@ alias 600="chmod 600"
 alias 604="chmod 604"
 alias uname="uname -srm"
 alias diff="diff -U 0"
-alias ussh="ssh -i /Users/keisuke/.ssh/id_rsa -2 kuozumi@u-style.org"
 
 # backupfileを作成 usage : org ファイル名
 org () { cp $1 ${1}.org ; }
