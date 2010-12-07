@@ -3,9 +3,12 @@
 #
 
 # use zsh
-if [ -f /bin/zsh -a -f ~/.zshrc ]; then
-    exec /bin/zsh
+ZSH=`grep \/zsh /etc/shells|grep -v '#'`
+if [ "${ZSH}" != "" -a -f ~/.zshrc ]; then
+    exec $ZSH
 fi
+
+SHELL=`which bash`
 
 WORKING_DIRECTORY='\[\e[$[COLUMNS-$(echo -n " (\w)" | wc -c)]C\e[1;35m(\w)\e[0m\e[$[COLUMNS]D\]'
 PS1='\033k\033\\'${WORKING_DIRECTORY}'${debian_chroot:+($debian_chroot)}\[\033]2;[\h:\w] \u \007\]\[\e[0;33m\[\e[1;32m\][\u@\h]\[\e[00m\]\$ '
@@ -28,6 +31,14 @@ LESS='-X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..].'
 # パーミッション644でファイルを作成
 umask 022
 
+# CVS
+CVS_RSH="ssh"
+CVSEDITOR="vim"
+
+# SVN
+SVN_EDITOR="vim"
+SVN_SSH="ssh"
+
 LS_COLORS="di=46:ln=46:ex=36:*.tar=31:*.gz=31:*.tgz=31:*.bz2=31:*.zip=31:*.sql=32:*.SQL=32':*.html=35:*.hdml=35"
 TERM="vt100"
 
@@ -36,12 +47,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# local settings
-if [ -f ~/.bash_profile.local ]; then
-  source ~/.bash_profile.local
-fi
-
-export PS1 PATH MANPATH LD_LIBRARY_PATH CLASSPATH EDITOR HISSIZE JLESSCHARSET LANG LC_ALL LC_CTYPE PAGER LESS LS_COLORS TERM
+export PS1 PATH MANPATH EDITOR HISSIZE PAGER LESS CVS_RSH CVSEDITOR SVN_EDITOR SVN_SSH LS_COLORS TERM
 
 # aliaes
 alias ll="ls -laF"
@@ -71,3 +77,8 @@ alias diff="diff -U 0"
 
 # backupfileを作成 usage : org ファイル名
 org () { cp $1 ${1}.org ; }
+
+# local settings
+if [ -f ~/.bash_profile.local ]; then
+  source ~/.bash_profile.local
+fi

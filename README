@@ -4,5 +4,4 @@ My DotFiles
 -- .gitconfig
 $ git config --global user.email "Your email"
 $ git config --global user.name "Your name"
-$ git config --global github.user "Your Github-Username"
 $ git config --global github.token "Your Githubb-Token"
