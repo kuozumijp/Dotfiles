@@ -58,6 +58,17 @@ let g:AutoComplPop_BehaviorKeywordLength = 2
 highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
+
+"------------------------------------------------------------------------
+" (),[],{},<>,””,’’,“入力+()の中にカーソル
+imap {} {}<Left>
+imap [] []<Left>
+imap () ()<Left>
+imap “” “”<Left>
+imap ” ”<Left>
+imap <> <><Left>
+imap “ “<Left>
+
 "------------------------------------------------------------------------
 " vimtab関連
 if has('mac')
