@@ -60,14 +60,13 @@ highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
 
 "------------------------------------------------------------------------
-" (),[],{},<>,””,’’,“入力+()の中にカーソル
+" 括弧、クォートの入力時にカーソルを1個戻す
 imap {} {}<Left>
 imap [] []<Left>
 imap () ()<Left>
-imap “” “”<Left>
-imap ” ”<Left>
 imap <> <><Left>
-imap “ “<Left>
+imap '' ''<Left>
+imap "" ""<Left>
 
 "------------------------------------------------------------------------
 " vimtab関連
