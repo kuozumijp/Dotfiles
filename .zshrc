@@ -91,6 +91,7 @@ alias 600="chmod 600"
 alias 604="chmod 604"
 alias uname="uname -srm"
 alias diff="diff -U 0"
+alias logout="exit"
 
 # backupfileを作成 usage : org ファイル名
 org () { cp $1 ${1}.org ; }
