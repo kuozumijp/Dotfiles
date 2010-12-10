@@ -47,6 +47,7 @@ HISTFILE=~/.zsh_history # historyファイル
 HISTSIZE=10000 # ファイルサイズ
 SAVEHIST=10000 # saveする量
 setopt hist_ignore_dups # 重複を記録しない
+setopt hist_ignore_all_dups # 重複を記録しない
 setopt hist_reduce_blanks # スペース排除
 setopt share_history # 履歴ファイルを共有
 setopt EXTENDED_HISTORY # zshの開始終了を記録
