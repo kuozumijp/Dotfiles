@@ -3,18 +3,20 @@
 #
 
 # status
-hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
+hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@%H[$LANG] (%l) "
 
 # window resize off
 termcapinfo vt100 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcapinfo xterm-256color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 defscrollback 10000
 autodetach on
 startup_message off
-term vt100
+#term vt100
+term screen
 shell -$SHELL
-shelltitle "$ |bash"
+shelltitle "$ |"$SHELL
 
 # Escape default:Ctrl-a
 escape ^z^z

@@ -78,12 +78,30 @@ alias vi="TERM=xterm-color vim"
 alias vim="TERM=xterm-color vim"
 alias make="gmake"
 alias svn="env LANG=C svn"
+
 if [ -x /usr/local/bin/rlwrap ]
 then
   alias sqlplus="rlwrap sqlplus /nolog"
 else
   alias sqlplus="sqlplus /nolog"
 fi
+
+COMMAND=`which colordiff`
+if [ "$?" -eq "0" ]; then
+  alias diff="$COMMAND -u"
+else
+  COMMAND=`which colordiff.pl`
+  if [ "$?" -eq "0" ]; then
+    alias diff="$COMMAND -u"
+  else
+    alias diff="diff -U 0"
+  fi
+fi
+
+if [ -x /usr/local/bin/multitail ]; then
+  alias tail="multitail"
+fi
+
 alias bkup="tar cvf bkup_$(date +%Y%m%d%H%M%S).tar"
 alias c="clear"
 alias u="cd ../"
@@ -91,7 +109,6 @@ alias 755="chmod 755"
 alias 600="chmod 600"
 alias 604="chmod 604"
 alias uname="uname -srm"
-alias diff="diff -U 0"
 alias logout="exit"
 
 # backupfileを作成 usage : org ファイル名
@@ -110,5 +127,17 @@ function pcolor() {
     done
     echo
 }
+
+# screen
+case "${TERM}" in
+    screen)
+        SCREEN_HOST=`hostname -s`
+        preexec() {
+            echo -ne "\ek${1\\ *}($SCREEN_HOST)\e\\"
+        }
+        precmd() {
+            echo -ne "\ek$(basename $(pwd))($SCREEN_HOST)\e\\"
+        }
+esac
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local # 設定ファイルのinclude
