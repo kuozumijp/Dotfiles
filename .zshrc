@@ -133,7 +133,7 @@ case "${TERM}" in
     screen)
         SCREEN_HOST=`hostname -s`
         preexec() {
-            echo -ne "\ek${1\\ *}($SCREEN_HOST)\e\\"
+            echo -ne "\ek${1%% *}($SCREEN_HOST)\e\\"
         }
         precmd() {
             echo -ne "\ek$(basename $(pwd))($SCREEN_HOST)\e\\"
