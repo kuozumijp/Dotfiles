@@ -56,8 +56,9 @@ setopt EXTENDED_HISTORY # zshの開始終了を記録
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
+bindkey "^R" history-incremental-search-backward
 bindkey "^N" history-beginning-search-forward-end
+bindkey "^B" history-beginning-search-backward-end
 
 # CVS
 export CVS_RSH="ssh"
