@@ -158,7 +158,10 @@ set history=100
 
 " 起動時のど真ん中に出るメッセージを表示しない
 set shortmess+=I
- 
+
+" 全角記号判定
+set ambiwidth=double
+
 "------------------------------------------------------------------------
 " スペース類をハイライトする
 function! HighlightDislikeSpace()
