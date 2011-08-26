@@ -15,12 +15,18 @@ PROMPT2=$WHITE"%_> "$WHITE # multiline
 SPROMPT=$RED"zsh: correct '%R' to '%r' [n,y,a,e]? "$WHITE # errorline
 
 SHELL=`which zsh`
+SSHDCONFIG=`find /etc/ -name sshd_config -maxdepth 2 2&>1 |sort -u`
+ACCESSPORT=`grep Port ${SSHDCONFIG}|grep -v '#'|awk '{print $2}'`
+if [ -n "$ACCESSOIRT" -a "$ACCESSPORT" != "22" ]; then
+    PROMPT=$GREEN"[%n@${HOST%%.*}:"$RED"${ACCESSPORT}"$GREEN"]"$WHITE"%(!.#.$) " # left
+fi
 
 setopt transient_rprompt # 右側まで入力がきたら時間を消す
 setopt prompt_subst
 bindkey -v  # -v:vi  -e:emacs
 
 # Less Colors for Man Pages
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
 export LESS_TERMCAP_me=$'\E[0m'           # end mode
 export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
