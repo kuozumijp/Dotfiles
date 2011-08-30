@@ -15,7 +15,7 @@ PROMPT2=$WHITE"%_> "$WHITE # multiline
 SPROMPT=$RED"zsh: correct '%R' to '%r' [n,y,a,e]? "$WHITE # errorline
 
 SHELL=`which zsh`
-SSHDCONFIG=`find /etc/ -name sshd_config -maxdepth 2 2&>1 |sort -u`
+SSHDCONFIG=`find /etc/ -name sshd_config -maxdepth 2 2>&1 |sort -u`
 ACCESSPORT=`grep Port ${SSHDCONFIG}|grep -v '#'|awk '{print $2}'`
 if [ -n "$ACCESSPORT" -a "$ACCESSPORT" != "22" ]; then
     PROMPT=$GREEN"[%n@${HOST%%.*}:"$RED"${ACCESSPORT}"$GREEN"]"$WHITE"%(!.#.$) " # left
