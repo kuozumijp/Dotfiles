@@ -6,7 +6,7 @@ let st = g:snip_start_tag
 let et = g:snip_end_tag
 let cd = g:snip_elem_delim
 
-exec "Snippet sql CREATE OR REPLACE PACKAGE ".st.et." ".st."PackageName".et." IS<CR>----------------------------------------------------------------------<CR>-- $Id$<CR>--【".st."PropatyName".et."】".st."Title".et."<CR>--<CR>-- パッケージ名：".st."PackageName".et."<CR>--<CR>-- 更新履歴<CR>--  ".st."YYYY".et.".".st."MM".et.".".st."DD".et." ".AUTHOR." 新規作成<CR>--<CR>-- Copyright (C) ".st."YYYY".et." ".COPYRIGHT.". All Rights Reserved.<CR>----------------------------------------------------------------------<CR>".st.et
+exec "Snippet sql CREATE OR REPLACE PACKAGE ".st.et." ".st."PackageName".et." IS<CR>----------------------------------------------------------------------<CR>-- $Id$<CR>--【".st."PropatyName".et."】".st."Title".et."<CR>--<CR>-- パッケージ名：".st."PackageName".et."<CR>--<CR>-- 更新履歴<CR>--  ".TODAY." ".AUTHOR." 新規作成<CR>--<CR>-- Copyright (C) ".COPYRIGHT.". All Rights Reserved.<CR>----------------------------------------------------------------------<CR>".st.et
 exec "Snippet sele SELECT<CR><TAB>".st.et."<CR>FROM<CR><TAB>".st."TableName".et."<CR>WHERE<CR><TAB>".st.et.";<CR>".st.et
 exec "Snippet up UPDATE<CR><TAB>".st."TableName".et."<CR>SET<CR><TAB>".st."Coulm".et." = ".st."Value".et."<CR>WHERE<CR><TAB>".st.et.";<CR>".st.et
 exec "Snippet del DELETE FROM<CR><TAB>".st."TableName".et."<CR>WHERE<CR><TAB>".st.et.";<CR>".st.et

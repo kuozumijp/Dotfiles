@@ -6,7 +6,7 @@ let st = g:snip_start_tag
 let et = g:snip_end_tag
 let cd = g:snip_elem_delim
 
-exec "Snippet perl \#!/usr/local/bin/perl<CR>\#\#\#<CR>\# ".st."Title".et."<CR>\#<CR>\# \@version \$Id\$<CR>\#<CR>\# \@author ".AUTHOR." <".MAILADDRESS."><CR>\# \@since ".st."YYYY".et."/".st."MM".et."/".st."DD".et."<CR>\# @copyright Copyright (C) ".COPYRIGHT.". All Rights Reserved.<CR>\#\#\#<CR><CR>".st.et
+exec "Snippet perl \#!/usr/local/bin/perl<CR>\#\#\#<CR>\# ".st."Title".et."<CR>\#<CR>\# \@version \$Id\$<CR>\#<CR>\# \@author ".AUTHOR." <".MAILADDRESS."><CR>\# \@since ".TODAY."<CR>\# @copyright Copyright (C) ".COPYRIGHT.". All Rights Reserved.<CR>\#\#\#<CR><CR>".st.et
 exec "Snippet sub \#---<CR>\# ".st.et."<CR>\#---<CR>sub ".st."FunctionName".et." {<CR>".st.et."<CR>}<CR>".st.et
 exec "Snippet class package ".st."ClassName".et.";<CR><CR>".st.et.st."ParentClass".et.st.et.";<CR><CR>sub new {<CR>my \$class = shift;<CR>\$class = ref \$class if ref \$class;<CR>my $self = bless {}, \$class;<CR>\$self;<CR>}<CR><CR>1;<CR>".st.et
 exec "Snippet xfore ".st."expression".et." foreach @".st."array".et.";".st.et
