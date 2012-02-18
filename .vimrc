@@ -25,7 +25,7 @@ set nocompatible
 
 " インデントをTabではなくスペースにしたい
 set expandtab
-set tabstop=2
+set tabstop=4
 
 " 行番号を表示させる
 set number
@@ -85,13 +85,15 @@ endif
 set rtp+=$DOTVIM/bundle/vundle/
 call vundle#rc()
 
-filetype plugin indent on
+filetype plugin on
 
 "------------------------------------------------------------------------
 " bundle Plugins
 Bundle 'git://github.com/vim-scripts/sudo.vim.git'
-Bundle 'git://github.com/Shougo/neocomplcache.git'
-Bundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
+"Bundle 'git://github.com/Shougo/neocomplcache.git'
+"Bundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
+Bundle 'git://github.com/vim-scripts/AutoComplPop.git'
+Bundle 'git://github.com/vim-scripts/snippetsEmu.git'
 Bundle 'git://github.com/vim-scripts/svn.vim.git'
 Bundle 'git://github.com/motemen/git-vim.git'
 
@@ -134,6 +136,7 @@ au BufNewFile,BufRead *.SQL   :set ft=sql
 let AUTHOR = 'Keisuke Uozumi'
 let MAILADDRESS = 'eroejp@gmail.com'
 let COPYRIGHT = 'Keisuke Uozumi'
+let TODAY = strftime("%Y/%m/%d")
 
 "------------------------------------------------------------------------
 " 辞書関連
@@ -145,16 +148,16 @@ autocmd FileType html :set dictionary=$VIMRUNTIME/syntax/html.vim
 
 "------------------------------------------------------------------------
 " neocomplcache.vim 関連
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 2
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
+let g:neocomplcache_enable_at_startup = 0
+"let g:neocomplcache_enable_smart_case = 1
+"let g:neocomplcache_enable_underbar_completion = 1
+"let g:neocomplcache_min_syntax_length = 2
+"let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
+"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "------------------------------------------------------------------------
 " autocomplpop.vim 関連
-let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup = 1
 let g:AutoComplPop_BehaviorFileLength = 2
 let g:AutoComplPop_BehaviorKeywordLength = 2
 
@@ -191,7 +194,7 @@ endif
 
 "------------------------------------------------------------------------
 " 自動改行無し
-autocmd FileType * :set formatoptions-=ro
+autocmd FileType perl :set formatoptions-=ro
 
 "------------------------------------------------------------------------
 " スペース類をハイライトする
@@ -222,6 +225,10 @@ function! ShebangExecute()
   endif
 endfunction
 nmap ,e :call ShebangExecute()<CR>
+
+"------------------------------------------------------------------------
+" F6で今日の日付を入力する
+nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d")<CR><CR>
 
 "------------------------------------------------------------------------
 " おまじない文字コード
