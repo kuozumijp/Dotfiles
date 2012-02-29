@@ -94,7 +94,7 @@ Bundle 'git://github.com/vim-scripts/sudo.vim.git'
 "Bundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
 Bundle 'git://github.com/vim-scripts/AutoComplPop.git'
 Bundle 'git://github.com/vim-scripts/snippetsEmu.git'
-Bundle 'git://github.com/vim-scripts/svn.vim.git'
+Bundle 'git://github.com/vim-scripts/svn-diff.vim.git'
 Bundle 'git://github.com/motemen/git-vim.git'
 
 "------------------------------------------------------------------------
@@ -293,4 +293,9 @@ set fileformats=unix,dos,mac
 " □とか○の文字があってもカーソル位置がずれないようにする
 if exists('&ambiwidth')
   set ambiwidth=double
+endif
+
+" 環境ごとの設定は.vimrc.localに置く
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
 endif
