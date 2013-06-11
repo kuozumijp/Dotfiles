@@ -9,5 +9,8 @@
 	ci = commit -a
 	st = status
 	up = pull --rebase
+	br = branch
+	si = submodule init
+	su = submodule update
 [github]
 	user = user
