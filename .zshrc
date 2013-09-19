@@ -129,6 +129,8 @@ alias logout="exit"
 # backupfileを作成 usage : org ファイル名
 org () { cp $1 ${1}.org ; }
 
+# 補完候補をハイライトする
+zstyle ':completion:*:default' menu select=2
 
 # 補完関数の表示を強化する
 zstyle ':completion:*' verbose yes
