@@ -2,6 +2,8 @@
 # kuozumijp .zshrc $Id$
 #
 
+export PATH=$PATH:$HOME/bin
+
 # color
 local WHITE=$'%{\e[m%}'
 local GREEN=$'%{\e[38;5;2m%}'
