@@ -7,6 +7,7 @@ export PATH=$PATH:/usr/X11R6/bin:/etc:$HOME/bin
 # aliaes
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 compdef mosh=ssh
+compdef hub=git
 
 # boxen
 source /opt/boxen/env.sh
