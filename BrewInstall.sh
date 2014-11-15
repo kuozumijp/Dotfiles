@@ -23,18 +23,19 @@ brew install zsh
 brew install zsh-completions
 
 # Packages for brew-cask
-brew install brew-cask
+#brew install brew-cask
+brew install phinze/cask/brew-cask
 
 # .dmg from brew-cask
 brew cask install atom
 brew cask install boot2docker
+brew cask install box-sync
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-japanese-ime
-brew cask install InsomniaX
-brew cask install IPinmenubar
+brew cask install insomniax
+brew cask install ip-in-menu-bar
 brew cask install iterm2
-brew cask install kobito
 brew cask install shiftit
 brew cask install virtualbox
 brew cask install xtrafinder
