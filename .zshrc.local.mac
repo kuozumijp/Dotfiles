@@ -2,17 +2,14 @@
 # kuozumi .zshrc.local for mac
 #
 
-export PATH=$PATH:/usr/X11R6/bin:/etc:$HOME/bin
+#export PATH=$PATH:/usr/X11R6/bin:/etc:$HOME/bin
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # aliaes
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 compdef mosh=ssh
 compdef hub=git
 
-alias vi="TERM=xterm-color /opt/boxen/homebrew/bin/vim"
-alias vim="TERM=xterm-color /opt/boxen/homebrew/bin/vim"
-alias grep="/opt/boxen/homebrew/bin/ggrep"
-
-# boxen
-fpath=(/opt/boxen/homebrew/share/zsh-completions/ $fpath)
-source /opt/boxen/env.sh
+alias vi="TERM=xterm-color /usr/local/bin/vim"
+alias vim="TERM=xterm-color /usr/local/bin/vim"
+alias grep="/usr/local/bin/ggrep"
