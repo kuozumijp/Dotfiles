@@ -39,7 +39,7 @@ brew cask install insomniax
 brew cask install ip-in-menu-bar
 brew cask install iterm2
 brew cask install java
-brew cask install mysql-workbench
+brew cask install mysqlworkbench
 brew cask install shiftit
 brew cask install virtualbox
 brew cask install xtrafinder
