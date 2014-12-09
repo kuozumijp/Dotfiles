@@ -4,8 +4,9 @@
 
 syntax on
 
-" 他ファイルへのヤンクを1000行までに
-set viminfo='50,\"1000,:0,n~/.viminfo
+" 最近編集した 50 ファイル内のマークは保存
+" レジスタの中身 (それぞれ 1000 行まで) は保存
+set viminfo='50,\"1000,:0,n~/.vim/viminfo
 
 " タブバーを常に表示する
 set showtabline=2
