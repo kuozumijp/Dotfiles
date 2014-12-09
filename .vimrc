@@ -4,6 +4,9 @@
 
 syntax on
 
+" 他ファイルへのヤンクを1000行までに
+set viminfo='50,\"1000,:0,n~/.viminfo
+
 " タブバーを常に表示する
 set showtabline=2
 
