@@ -29,6 +29,7 @@ set nocompatible
 " インデントをTabではなくスペースにしたい
 set expandtab
 set tabstop=4
+set shiftwidth=4
 
 " 行番号を表示させる
 set number
