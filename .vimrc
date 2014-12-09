@@ -4,6 +4,9 @@
 
 syntax on
 
+" よりVimらしく使いたい
+set nocompatible
+
 " 最近編集した 50 ファイル内のマークは保存
 " レジスタの中身 (それぞれ 1000 行まで) は保存
 set viminfo='50,\"1000,:0,n~/.vim/viminfo
@@ -23,9 +26,6 @@ set title
 " Vimの折りたたみ関連
 set foldmethod=marker
 au FileType perl :set commentstring=#%s
-
-" よりVimらしく使いたい
-set nocompatible
 
 " インデントをTabではなくスペースにしたい
 set expandtab
