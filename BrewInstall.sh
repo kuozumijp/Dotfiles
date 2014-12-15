@@ -15,6 +15,7 @@ brew install git
 brew install homebrew/dupes/grep
 brew install hub
 brew install markdown
+brew install multitail
 brew install mosh
 brew install tmux
 brew install tree
