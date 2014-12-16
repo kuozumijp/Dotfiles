@@ -37,6 +37,7 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install insomniax
+brew cask install intel-power-gadget
 brew cask install ip-in-menu-bar
 brew cask install iterm2
 brew cask install java
