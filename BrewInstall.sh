@@ -31,6 +31,7 @@ brew install phinze/cask/brew-cask
 
 # .dmg from brew-cask
 brew cask install android-studio
+brew cask install android-file-transfer
 brew cask install atom
 brew cask install boot2docker
 brew cask install box-sync
