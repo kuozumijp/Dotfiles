@@ -11,6 +11,7 @@ brew tap homebrew/binary || true
 
 # Packages for development
 brew install android-sdk
+brew install carthage
 brew install git
 brew install homebrew/dupes/grep
 brew install hub
