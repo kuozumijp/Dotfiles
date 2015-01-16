@@ -32,12 +32,14 @@ brew install phinze/cask/brew-cask
 # .dmg from brew-cask
 brew cask install android-studio
 brew cask install android-file-transfer
+brew cask install appcleaner
 brew cask install atom
 brew cask install boot2docker
 brew cask install box-sync
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-japanese-ime
+brew cask install goofy
 brew cask install insomniax
 brew cask install intel-power-gadget
 brew cask install ip-in-menu-bar
