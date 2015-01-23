@@ -35,6 +35,7 @@ brew cask install android-file-transfer
 brew cask install appcleaner
 brew cask install astah-community
 brew cask install atom
+brew cask install bettertouchtool
 brew cask install boot2docker
 brew cask install box-sync
 brew cask install dropbox
