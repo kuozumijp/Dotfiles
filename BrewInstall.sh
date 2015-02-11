@@ -30,6 +30,7 @@ brew install zsh-completions
 brew install phinze/cask/brew-cask
 
 # .dmg from brew-cask
+brew cask install alfred 
 brew cask install android-studio
 brew cask install android-file-transfer
 brew cask install appcleaner
