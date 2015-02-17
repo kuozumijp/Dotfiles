@@ -184,12 +184,14 @@ imap "" ""<Left>
 "------------------------------------------------------------------------
 " vimtab関連
 if has('mac')
-  nnoremap <C-t> :tabedit ./ <Return>
+  nnoremap <C-t> :tabnew<Return>
+  nnoremap <C-a> :tabedit ./ <Return>
   nnoremap <C-w> :tabclose<Return>
   nnoremap <C-r> gt
   nnoremap <C-e> gT
 else
-  nnoremap <C-t> :tabedit ./ <Return>
+  nnoremap <C-t> :tabnew<Return>
+  nnoremap <C-a> :tabedit ./ <Return>
   nnoremap <C-w> :tabclose<Return>
   nnoremap <C-r> gt
   nnoremap <C-Tab> gt
