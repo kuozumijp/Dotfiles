@@ -49,6 +49,7 @@ brew cask install intel-power-gadget
 brew cask install ip-in-menu-bar
 brew cask install iterm2
 brew cask install java
+brew cask install kindle
 brew cask install macdown
 brew cask install mysqlworkbench
 brew cask install shiftit
