@@ -23,6 +23,17 @@ if [ -n "$ACCESSPORT" -a "$ACCESSPORT" != "22" ]; then
     PROMPT=$GREEN"[%n@${HOST%%.*}:"$RED"${ACCESSPORT}"$GREEN"]"$WHITE"%(!.#.$) " # left
 fi
 
+# gitのステータスを表示
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
 setopt transient_rprompt # 右側まで入力がきたら時間を消す
 setopt prompt_subst
 bindkey -v  # -v:vi  -e:emacs
