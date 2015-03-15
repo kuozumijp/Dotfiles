@@ -18,6 +18,7 @@ brew install hub
 brew install markdown
 brew install multitail
 brew install mosh
+brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
 brew install vim
