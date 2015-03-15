@@ -75,12 +75,6 @@ set shortmess+=I
 " 全角記号判定
 set ambiwidth=double
 
-" マウスですべてのモードを操作出来るようにする
-set mouse=a
-
-" xterm + ドラッグ
-set ttymouse=xterm2
-
 set hlsearch
 set incsearch
 
