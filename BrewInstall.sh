@@ -57,7 +57,7 @@ brew cask install kitematic
 brew cask install macdown
 brew cask install mysqlworkbench
 brew cask install shiftit
-brew cask install sqlite-database-browser
+brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install virtualbox
 brew cask install xtrafinder
 brew cask install xquartz
