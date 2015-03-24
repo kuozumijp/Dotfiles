@@ -43,6 +43,7 @@ brew cask install box-sync
 brew cask install chrome-devtools
 brew cask install day-o
 brew cask install dropbox
+brew cask install firefox
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install goofy
