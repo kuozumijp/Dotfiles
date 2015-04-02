@@ -41,6 +41,7 @@ brew cask install bettertouchtool
 brew cask install boot2docker
 brew cask install box-sync
 brew cask install chrome-devtools
+brew cask install coda
 brew cask install day-o
 brew cask install dropbox
 brew cask install firefox
