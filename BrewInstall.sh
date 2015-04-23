@@ -12,16 +12,19 @@ brew tap homebrew/binary || true
 # Packages for development
 brew install android-sdk
 brew install carthage
+brew install flow
 brew install git
 brew install homebrew/dupes/grep
 brew install hub
 brew install markdown
 brew install multitail
 brew install mosh
+brew install node
 brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
 brew install vim
+brew install watchman
 brew install wget
 brew install zsh
 brew install zsh-completions
