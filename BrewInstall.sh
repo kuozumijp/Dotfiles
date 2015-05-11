@@ -65,6 +65,7 @@ brew cask install mysqlworkbench
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install virtualbox
+brew cask install vlc
 brew cask install xtrafinder
 brew cask install xquartz
 
