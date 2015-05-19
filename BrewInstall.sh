@@ -53,6 +53,7 @@ brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install goofy
 brew cask install ifunbox
+brew cask install imageoptim
 brew cask install insomniax
 brew cask install intel-power-gadget
 brew cask install ip-in-menu-bar
