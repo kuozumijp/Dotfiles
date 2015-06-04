@@ -11,6 +11,7 @@ brew tap homebrew/binary || true
 
 # Packages for development
 brew install android-sdk
+brew install homebrew/versions/appledoc22
 brew install carthage
 brew install flow
 brew install git
