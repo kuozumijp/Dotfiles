@@ -53,7 +53,6 @@ brew cask install dropbox
 brew cask install firefox
 brew cask install google-chrome
 brew cask install google-japanese-ime
-brew cask install goofy
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install insomniax
@@ -64,6 +63,7 @@ brew cask install java
 brew cask install kindle
 brew cask install kitematic
 brew cask install macdown
+brew cask install messenger
 brew cask install mysqlworkbench
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
