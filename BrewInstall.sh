@@ -65,11 +65,14 @@ brew cask install kitematic
 brew cask install macdown
 brew cask install messenger
 brew cask install mysqlworkbench
+brew cask install omniplan
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
+brew cask install squidman
 brew cask install trailer
 brew cask install virtualbox
 brew cask install vlc
+brew cask install wireshark
 brew cask install xtrafinder
 brew cask install xquartz
 
