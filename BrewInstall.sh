@@ -12,9 +12,12 @@ brew tap homebrew/binary || true
 # Packages for development
 brew install android-sdk
 brew install homebrew/versions/appledoc22
+brew install bash-completion
+brew install codefirst/sparkling/brew-sparkling
 brew install carthage
 brew install flow
 brew install git
+brew install graphviz
 brew install homebrew/dupes/grep
 brew install hub
 brew install markdown
@@ -57,6 +60,7 @@ brew cask install ifunbox
 brew cask install imageoptim
 brew cask install insomniax
 brew cask install intel-power-gadget
+brew cask install intellij-idea-ce
 brew cask install ip-in-menu-bar
 brew cask install iterm2
 brew cask install java
@@ -65,6 +69,7 @@ brew cask install kitematic
 brew cask install macdown
 brew cask install messenger
 brew cask install mysqlworkbench
+brew cask install notifyr
 brew cask install omniplan
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
@@ -78,3 +83,4 @@ brew cask install xquartz
 
 # Remove outdated versions
 brew cleanup
+brew cask cleanup
