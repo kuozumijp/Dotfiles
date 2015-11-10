@@ -8,6 +8,7 @@ brew upgrade --all
 brew tap phinze/homebrew-cask || true
 brew tap homebrew/dupes || true
 brew tap homebrew/binary || true
+brew tap caskroom/versions
 
 # Packages for development
 brew install android-sdk
@@ -54,7 +55,7 @@ brew cask install coda
 brew cask install day-o
 brew cask install dropbox
 brew cask install firefox
-brew cask install google-chrome
+#brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install ifunbox
 brew cask install imageoptim
