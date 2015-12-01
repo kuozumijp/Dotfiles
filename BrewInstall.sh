@@ -20,6 +20,7 @@ brew install flow
 brew install git
 brew install graphviz
 brew install homebrew/dupes/grep
+brew install hg
 brew install hub
 brew install markdown
 brew install multitail
@@ -71,7 +72,6 @@ brew cask install macdown
 brew cask install messenger
 brew cask install mysqlworkbench
 brew cask install notifyr
-brew cask install omniplan
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install squidman
