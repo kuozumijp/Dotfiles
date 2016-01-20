@@ -49,7 +49,7 @@ brew cask install astah-community
 brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
-brew cask install boot2docker
+#brew cask install boot2docker
 brew cask install box-sync
 brew cask install chrome-devtools
 brew cask install coda
