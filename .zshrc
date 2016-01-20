@@ -189,3 +189,4 @@ case "${TERM}" in
 esac
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local # 設定ファイルのinclude
+typeset -U path cdpath fpath manpath # 重複PATHの削除
