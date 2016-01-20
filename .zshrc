@@ -111,9 +111,9 @@ COMMAND_SQLPLUS=`which sqlplus64`
 if [ "$?" -eq "0" ]; then
   COMMAND_RLWRAP=`which rlwrap`
   if [ "$?" -eq "0" ]; then
-    alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus sqlplus64 /nolog"
+    alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus $COMMAND_SQLPLUS /nolog"
   else
-    alias sqlplus="sqlplus /nolog"
+    alias sqlplus="$COMMAND_SQLPLUS /nolog"
   fi
 fi
 
