@@ -107,27 +107,28 @@ alias vim="TERM=xterm-color vim"
 alias make="gmake"
 alias svn="env LANG=C svn"
 
-if [ -x /usr/local/bin/rlwrap ]
-then
-  alias sqlplus="rlwrap sqlplus /nolog"
+COMMAND_RLWRAP=`which rlwrap`
+if [ "$?" -eq "0" ]; then
+  alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus sqlplus64 /nolog"
 else
   alias sqlplus="sqlplus /nolog"
 fi
 
-COMMAND=`which colordiff`
+COMMAND_DIFF=`which colordiff`
 if [ "$?" -eq "0" ]; then
-  alias diff="$COMMAND -u"
+  alias diff="$COMMAND_DIFF -u"
 else
-  COMMAND=`which colordiff.pl`
+  COMMAND_DIFF=`which colordiff.pl`
   if [ "$?" -eq "0" ]; then
-    alias diff="$COMMAND -u"
+    alias diff="$COMMAND_DIFF -u"
   else
     alias diff="diff -U 0"
   fi
 fi
 
-if [ -x /usr/local/bin/multitail ]; then
-  alias tail="multitail"
+COMMAND_MULTITAIL=`which multitail`
+if [ "$?" -eq "0" ]; then
+  alias tail="$COMMAND_MULTITAIL"
 fi
 
 alias bkup="tar cvf bkup_$(date +%Y%m%d%H%M%S).tar"
