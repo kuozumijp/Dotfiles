@@ -99,7 +99,7 @@ Bundle 'git://github.com/vim-scripts/sudo.vim.git'
 "Bundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
 Bundle 'git://github.com/vim-scripts/AutoComplPop.git'
 Bundle 'git://github.com/vim-scripts/snippetsEmu.git'
-Bundle 'git://github.com/vim-scripts/svn-diff.vim.git'
+"Bundle 'git://github.com/vim-scripts/svn-diff.vim.git'
 Bundle 'git://github.com/motemen/git-vim.git'
 
 "------------------------------------------------------------------------
