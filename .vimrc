@@ -152,6 +152,11 @@ autocmd FileType ruby :set dictionary=$VIMRUNTIME/syntax/ruby.vim
 autocmd FileType html :set dictionary=$VIMRUNTIME/syntax/html.vim
 
 "------------------------------------------------------------------------
+" 言語設定
+autocmd FileType javascript :set tabstop=2
+autocmd FileType javascript :set shiftwidth=2
+
+"------------------------------------------------------------------------
 " neocomplcache.vim 関連
 let g:neocomplcache_enable_at_startup = 0
 "let g:neocomplcache_enable_smart_case = 1
