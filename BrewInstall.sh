@@ -53,6 +53,7 @@ brew cask install bettertouchtool
 brew cask install box-sync
 brew cask install chrome-devtools
 brew cask install coda
+brew cask install cyberduck
 brew cask install day-o
 brew cask install dropbox
 brew cask install firefox
