@@ -22,6 +22,7 @@ brew install graphviz
 brew install homebrew/dupes/grep
 brew install hg
 brew install hub
+brew install libbluray
 brew install libgcrypt
 brew install markdown
 brew install multitail
