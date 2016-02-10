@@ -9,6 +9,7 @@ brew tap phinze/homebrew-cask || true
 brew tap homebrew/dupes || true
 brew tap homebrew/binary || true
 brew tap caskroom/versions
+brew tap someposer/homebrew-mmbd
 
 # Packages for development
 brew install android-sdk
@@ -24,6 +25,7 @@ brew install hg
 brew install hub
 brew install libbluray
 brew install libgcrypt
+brew install libmmbd
 brew install markdown
 brew install multitail
 brew install mosh
