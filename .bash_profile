@@ -11,43 +11,35 @@ fi
 SHELL=`which bash`
 
 WORKING_DIRECTORY='\[\e[$[COLUMNS-$(echo -n " (\w)" | wc -c)]C\e[1;35m(\w)\e[0m\e[$[COLUMNS]D\]'
-PS1='\033k\033\\'${WORKING_DIRECTORY}'${debian_chroot:+($debian_chroot)}\[\033]2;[\h:\w] \u \007\]\[\e[0;33m\[\e[1;32m\][\u@\h]\[\e[00m\]\$ '
+export PS1='\033k\033\\'${WORKING_DIRECTORY}'${debian_chroot:+($debian_chroot)}\[\033]2;[\h:\w] \u \007\]\[\e[0;33m\[\e[1;32m\][\u@\h]\[\e[00m\]\$ '
 
-PATH=/sbin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/mysql5/bin:/usr/bin:$PATH
-MANPATH=/opt/local/share/man:$MANPATH
+export PATH=$PATH:$HOME/bin
 
 #デフォルトのエディタ
-EDITOR="vi"
+export EDITOR="vim"
 
 # コマンドの履歴は500
-HISTSIZE="500"
+export HISTSIZE="10000"
 
 # ページャはless
-PAGER="less"
+export PAGER="less"
 
 # lessコマンド使用時に下部にファイル名と行数を表示
-LESS='-X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..].'
+export LESS='-X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..].'
 
 # パーミッション644でファイルを作成
 umask 022
 
 # CVS
-CVS_RSH="ssh"
-CVSEDITOR="vim"
+export CVS_RSH="ssh"
+export CVSEDITOR="vim"
 
 # SVN
-SVN_EDITOR="vim"
-SVN_SSH="ssh"
+export SVN_EDITOR="vim"
+export SVN_SSH="ssh"
 
-LS_COLORS="di=46:ln=46:ex=36:*.tar=31:*.gz=31:*.tgz=31:*.bz2=31:*.zip=31:*.sql=32:*.SQL=32':*.html=35:*.hdml=35"
-TERM="vt100"
-
-# bash completion
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
-
-export PS1 PATH MANPATH EDITOR HISSIZE PAGER LESS CVS_RSH CVSEDITOR SVN_EDITOR SVN_SSH LS_COLORS TERM
+export LS_COLORS="di=46:ln=46:ex=36:*.tar=31:*.gz=31:*.tgz=31:*.bz2=31:*.zip=31:*.sql=32:*.SQL=32':*.html=35:*.hdml=35"
+export TERM="vt100"
 
 # aliaes
 alias ll="ls -laF"
@@ -60,12 +52,14 @@ alias vi="TERM=xterm-color vim"
 alias vim="TERM=xterm-color vim"
 alias make="gmake"
 alias svn="env LANG=C svn"
+
 if [ -x /usr/local/bin/rlwrap ]
 then
   alias sqlplus="rlwrap sqlplus /nolog"
 else
   alias sqlplus="sqlplus /nolog"
 fi
+
 alias bkup="tar cvf bkup_$(date +%Y%m%d%H%M%S).tar"
 alias c="clear"
 alias u="cd ../"
@@ -73,7 +67,6 @@ alias 755="chmod 755"
 alias 600="chmod 600"
 alias 604="chmod 604"
 alias uname="uname -srm"
-alias diff="diff -U 0"
 
 # backupfileを作成 usage : org ファイル名
 org () { cp $1 ${1}.org ; }
