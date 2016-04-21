@@ -1,5 +1,5 @@
 "
-" kuozumijp .vimrc $Id$
+" kuozumijp vimrc $Id$
 "
 
 syntax on
@@ -93,31 +93,49 @@ call vundle#rc()
 filetype plugin on
 
 "------------------------------------------------------------------------
-" bundle Plugins
-Bundle 'git://github.com/vim-scripts/sudo.vim.git'
-"Bundle 'git://github.com/Shougo/neocomplcache.git'
-"Bundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
-Bundle 'git://github.com/vim-scripts/AutoComplPop.git'
-Bundle 'git://github.com/vim-scripts/snippetsEmu.git'
-"Bundle 'git://github.com/vim-scripts/svn-diff.vim.git'
-Bundle 'git://github.com/motemen/git-vim.git'
+" dein Settings
+
+let g:rc_dir = $DOTVIM
+" deinディレクトリ
+let s:dein_dir = expand('$DOTVIM/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
+
+" 設定開始
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  " プラグインリストを収めた TOML ファイル
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+
+  " TOML を読み込み、キャッシュしておく
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+  " 設定終了
+  call dein#end()
+  call dein#save_state()
+endif
+
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
+endif
 
 "------------------------------------------------------------------------
 " highlight
-highlight LineNr ctermfg=white
-highlight Comment ctermfg=darkgreen
-highlight MoreMsg ctermfg=white
-highlight Statement ctermfg=white
-highlight PreProc ctermfg=blue
-highlight Type cterm=underline ctermfg=white
-highlight SpecialKey ctermbg=white ctermfg=black
-highlight Function ctermfg=blue
-highlight Search ctermfg=black ctermbg=yellow cterm=bold,underline
-highlight StatusLine cterm=bold,reverse ctermfg=blue ctermbg=white
-"highlight StatusLine cterm=bold,reverse ctermbg=white
-highlight TabLine term=bold cterm=bold ctermfg=black ctermbg=white
-highlight TabLineSel term=bold cterm=bold ctermfg=red ctermbg=black
-highlight TabLineFill ctermfg=white
+if filereadable(expand('$DOTVIM/vimrc.highlight'))
+  source $DOTVIM/vimrc.highlight
+endif
 
 "------------------------------------------------------------------------
 " PHP
@@ -135,6 +153,10 @@ au BufNewFile,BufRead *.pm    :set ft=perl
 "------------------------------------------------------------------------
 " sql
 au BufNewFile,BufRead *.SQL   :set ft=sql
+
+"------------------------------------------------------------------------
+" javascript
+au BufNewFile,BufRead *.js   :set ft=javascript
 
 "------------------------------------------------------------------------
 " snippetsEmu 関連 環境変数としてシグネチャを記述
@@ -157,25 +179,16 @@ autocmd FileType javascript :set tabstop=2
 autocmd FileType javascript :set shiftwidth=2
 
 "------------------------------------------------------------------------
-" neocomplcache.vim 関連
-let g:neocomplcache_enable_at_startup = 0
-"let g:neocomplcache_enable_smart_case = 1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_min_syntax_length = 2
-"let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
-"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"------------------------------------------------------------------------
-" autocomplpop.vim 関連
-let g:acp_enableAtStartup = 1
-let g:AutoComplPop_BehaviorFileLength = 2
-let g:AutoComplPop_BehaviorKeywordLength = 2
+" neocomplete関連
+if filereadable(expand('$DOTVIM/vimrc.neocomplete'))
+  source $DOTVIM/vimrc.neocomplete
+endif
 
 "------------------------------------------------------------------------
 " ポップアップメニューのカラーを設定
-highlight Pmenu ctermbg=4
-highlight PmenuSel ctermbg=1
-highlight PMenuSbar ctermbg=4
+"highlight Pmenu ctermbg=4
+"highlight PmenuSel ctermbg=1
+"highlight PMenuSbar ctermbg=4
 
 "------------------------------------------------------------------------
 " 括弧、クォートの入力時にカーソルを1個戻す
@@ -243,13 +256,6 @@ nmap ,e :call ShebangExecute()<CR>
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d")<CR><CR>
 
 "------------------------------------------------------------------------
-" おまじない文字コード
-"set enc=utf-8
-"set fenc=utf-8
-"set fencs=utf-8,euc-jp,iso-2022-jp,cp932
-"set enc=euc-jp
-"set fenc=euc-jp
-"set fencs=euc-jp,iso-2022-jp,cp932
 " 文字コードの自動認識
 if &encoding !=# 'utf-8'
   set encoding=japan
@@ -308,6 +314,6 @@ if exists('&ambiwidth')
 endif
 
 " 環境ごとの設定は.vimrc.localに置く
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
+if filereadable(expand('$DOTVIM/vimrc.local'))
+  source $DOTVIM/vimrc.local
 endif

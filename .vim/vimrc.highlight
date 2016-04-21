@@ -1,0 +1,18 @@
+"------------------------------------------------------------------------
+" vimrc.highlight
+"------------------------------------------------------------------------
+
+highlight LineNr ctermfg=white
+highlight Comment ctermfg=darkgreen
+highlight MoreMsg ctermfg=white
+highlight Statement ctermfg=white
+highlight PreProc ctermfg=blue
+highlight Type cterm=underline ctermfg=white
+highlight SpecialKey ctermbg=white ctermfg=black
+highlight Function ctermfg=blue
+highlight Search ctermfg=black ctermbg=yellow cterm=bold,underline
+highlight StatusLine cterm=bold,reverse ctermfg=blue ctermbg=white
+"highlight StatusLine cterm=bold,reverse ctermbg=white
+highlight TabLine term=bold cterm=bold ctermfg=black ctermbg=white
+highlight TabLineSel term=bold cterm=bold ctermfg=red ctermbg=black
+highlight TabLineFill ctermfg=white

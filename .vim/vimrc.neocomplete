@@ -1,0 +1,93 @@
+"------------------------------------------------------------------------
+" vimrc.neocomplete
+"------------------------------------------------------------------------
+
+" autocomplpop neocomplcacheを無効化
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+" neocompleteを有効化
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#force_overwrite_completefunc = 1
+
+" 補完が自動で開始される文字数
+let g:neocomplete#auto_completion_start_length = 3
+
+" smarrt case有効化。 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplete#enable_smart_case = 1
+
+" camle caseを有効化。大文字を区切りとしたワイルドカードのように振る舞う
+let g:neocomplete#enable_camel_case_completion = 1
+
+" _(アンダーバー)区切りの補完を有効化
+let g:neocomplete#enable_underbar_completion = 1
+
+" シンタックスをキャッシュするときの最小文字長を3に
+let g:neocomplete#min_syntax_length = 3
+
+" neocompleteを自動的にロックするバッファ名のパターン
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" -入力による候補番号の表示
+let g:neocomplete#enable_quick_match = 1
+
+" 補完候補の一番先頭を選択状態にする(AutoComplPopと似た動作)
+let g:neocomplete#enable_auto_select = 1
+
+"ポップアップメニューで表示される候補の数。初期値は100
+let g:neocomplete#max_list = 20
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+"------------------------------------------------------------------------
+" key-mappings.
+" TABで補完できるようにする
+inoremap <expr><S-TAB>  pumvisible( ? "\<C-p>" : "\<S-TAB>"
+
+" スニペット展開
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+
+" スニペットの候補をTABで移動
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" undo
+inoremap <expr><C-g> neocomplete#undo_completion()
+
+" 補完候補の共通部分までを補完する
+inoremap <expr><C-s> neocomplete#complete_common_string()
+
+" C-nでneocomplete補完
+inoremap <expr><C-n> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
+
+" C-pでkeyword補完
+inoremap <expr><C-p> pumvisible() ? "\<C-p>" : "\<C-p>\<C-n>"
+
+" 補完候補が出ていたら確定、なければ改行
+inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "<CR>"
+
+" FileType毎のOmni補完を設定
+autocmd FileType python     setlocal omnifunc=jedi#completions
+autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css        setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php        setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType c          setlocal omnifunc=ccomplete#Complete
+autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
+autocmd FileType java       setlocal omnifunc=javacomplete#Complete
+
+let g:nodejs_complete_config = {'js_compl_fn': 'jscomplete#CompleteJS', 'max_node_compl_len': 15}
