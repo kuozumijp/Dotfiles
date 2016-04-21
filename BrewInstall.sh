@@ -34,7 +34,7 @@ brew install reattach-to-user-namespace
 brew install sqlite3
 brew install tmux
 brew install tree
-brew install vim
+brew install vim --with-lua
 brew install watchman
 brew install wget
 brew install zsh
