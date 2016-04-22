@@ -17,6 +17,21 @@ on_ft = ['snippet']
 repo = 'Shougo/neocomplete'
 if = 'has("lua")'
 on_i = 1
+hook_source = '''
+  if filereadable(expand('$DOTVIM/vimrc.neocomplete'))
+    source $DOTVIM/vimrc.neocomplete
+  endif
+'''
+
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+if = '! has("lua")'
+on_i = 1
+hook_source = '''
+  if filereadable(expand('$DOTVIM/vimrc.neocomplcache'))
+    source $DOTVIM/vimrc.neocomplcache
+  endif
+'''
 
 [[plugins]]
 repo = 'moll/vim-node'
