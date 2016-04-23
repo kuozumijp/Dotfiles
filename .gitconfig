@@ -12,5 +12,6 @@
 	br = branch
 	si = submodule init
 	su = submodule update
+	cl = clone --recursive
 [github]
 	user = user
