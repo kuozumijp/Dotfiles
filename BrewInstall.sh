@@ -13,6 +13,7 @@ brew tap someposer/homebrew-mmbd
 
 # Packages for development
 brew install android-sdk
+brew install asciinema
 brew install homebrew/versions/appledoc22
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
