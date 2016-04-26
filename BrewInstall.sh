@@ -75,6 +75,7 @@ brew cask install java
 brew cask install kindle
 brew cask install kitematic
 brew cask install macdown
+brew cask install maczip4win
 brew cask install messenger
 brew cask install mysqlworkbench
 brew cask install notifyr
