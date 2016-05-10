@@ -18,6 +18,7 @@ brew install homebrew/versions/appledoc22
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
 brew install carthage
+brew install coreutils
 brew install flow
 brew install git
 brew install graphviz
