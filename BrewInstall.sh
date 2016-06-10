@@ -15,6 +15,7 @@ brew tap someposer/homebrew-mmbd
 brew install android-sdk
 brew install asciinema
 brew install homebrew/versions/appledoc22
+brew install awscli
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
 brew install carthage
