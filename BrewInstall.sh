@@ -5,7 +5,7 @@ brew update
 brew upgrade --all
 
 # Add Repository
-brew tap phinze/homebrew-cask || true
+brew tap caskroom/cask
 brew tap homebrew/dupes || true
 brew tap homebrew/binary || true
 brew tap caskroom/versions
@@ -32,7 +32,6 @@ brew install libmmbd
 brew install markdown
 brew install multitail
 brew install mosh
-#brew install node
 brew install reattach-to-user-namespace
 brew install sqlite3
 brew install tmux
@@ -42,10 +41,6 @@ brew install watchman
 brew install wget
 brew install zsh
 brew install zsh-completions
-
-# Packages for brew-cask
-#brew install brew-cask
-brew install phinze/cask/brew-cask
 
 # .dmg from brew-cask
 brew cask install alfred
@@ -59,13 +54,11 @@ brew cask install bartender
 brew cask install bettertouchtool
 #brew cask install boot2docker
 brew cask install box-sync
-#brew cask install chrome-devtools
 brew cask install coda
 brew cask install cyberduck
 brew cask install day-o
 brew cask install dropbox
 brew cask install firefox
-#brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install ifunbox
 brew cask install imageoptim
