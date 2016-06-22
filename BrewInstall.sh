@@ -5,7 +5,6 @@ brew update
 brew upgrade --all
 
 # Add Repository
-brew tap caskroom/cask
 brew tap homebrew/dupes || true
 brew tap homebrew/binary || true
 brew tap caskroom/versions
