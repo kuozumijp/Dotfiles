@@ -31,6 +31,7 @@ brew install libmmbd
 brew install markdown
 brew install multitail
 brew install mosh
+brew install peco
 brew install reattach-to-user-namespace
 brew install sqlite3
 brew install tmux
