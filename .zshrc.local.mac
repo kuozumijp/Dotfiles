@@ -3,6 +3,7 @@
 #
 
 #export PATH=$PATH:/usr/X11R6/bin:/etc:$HOME/bin
+export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
