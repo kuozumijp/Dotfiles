@@ -17,6 +17,7 @@ brew install homebrew/versions/appledoc22
 brew install awscli
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
+brew install colordiff
 brew install carthage
 brew install coreutils
 brew install flow
