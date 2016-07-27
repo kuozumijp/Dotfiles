@@ -1,5 +1,5 @@
 "
-" kuozumijp vimrc $Id$
+" kuozumijp vimrc
 "
 
 syntax on
@@ -27,7 +27,7 @@ set title
 set foldmethod=marker
 au FileType perl :set commentstring=#%s
 
-" インデントをTabではなくスペースにしたい
+" インデントはスペース
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -38,7 +38,7 @@ set number
 " 補完機能を制御する
 set wildmode=list:full
 
-" ビープ音を鳴らさないようにする
+" ビープ音を鳴らさない
 set visualbell
 
 " 現在のモードを表示する
@@ -77,6 +77,10 @@ set ambiwidth=double
 
 set hlsearch
 set incsearch
+
+" マウスを使う
+set mouse=nv
+set ttymouse=xterm2
 
 "------------------------------------------------------------------------
 " bundle Settings
