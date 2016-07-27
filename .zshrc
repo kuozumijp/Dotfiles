@@ -166,7 +166,7 @@ zstyle ':completion:*:manuals' separate-sections true
 
 # ファイル補完候補に色をつける
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # pcolor関数
 function pcolor() {
