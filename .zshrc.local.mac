@@ -1,5 +1,5 @@
 #
-# kuozumi .zshrc.local for mac
+# kuozumijp .zshrc.local for mac
 #
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight
