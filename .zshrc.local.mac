@@ -2,8 +2,8 @@
 # kuozumi .zshrc.local for mac
 #
 
-#export PATH=$PATH:/usr/X11R6/bin:/etc:$HOME/bin
 export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight
+#export PATH=$HOME/.nodebrew/current/bin:$HOME/bin/sqlplus/instantclient_11_2:$PATH:/usr/local/share/git-core/contrib/diff-highlight
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
@@ -20,6 +20,17 @@ alias readlink="greadlink"
 
 if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
+# Oracle
+COMMAND_SQLPLUS=`which sqlplus`
+if [ "$?" -eq "0" ]; then
+  #export ORACLE_HOME=`echo $(readlink -f $COMMAND_SQLPLUS) | sed 's/\/bin\/sqlplus//g'`
+  export ORACLE_HOME=~/bin/sqlplus/instantclient_11_2
+  export DYLD_LIBRARY_PATH=~/bin/sqlplus/instantclient_11_2
+  export LD_LIBRARY_PATH="$ORACLE_HOME/lib"
+  export TNS_ADMIN="$ORACLE_HOME/network/admin"
+  export NLS_LANG="Japanese_Japan.AL32UTF8"
 fi
 
 # tmuxのステータスバーにHostを表示する
