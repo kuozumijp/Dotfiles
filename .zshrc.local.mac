@@ -15,6 +15,7 @@ compdef hub=git
 alias vi="TERM=xterm-color /usr/local/bin/vim"
 alias vim="TERM=xterm-color /usr/local/bin/vim"
 alias grep="/usr/local/bin/ggrep"
+alias readlink="greadlink"
 
 if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
