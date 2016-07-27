@@ -6,7 +6,7 @@
 export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 # aliaes
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
