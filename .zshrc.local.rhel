@@ -1,0 +1,17 @@
+#
+# kuozumijp .zshrc.local.rhel
+#
+
+export PATH=$HOME/.vvm/bin:$HOME/.vvm/vims/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH
+export PATH=$PATH:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/pgsql/bin:/usr/X11R6/bin:/usr/local/etc:/etc:/etc/rc.d:/etc/rc.d/init.d:/home/y/bin64:/home/y/bin:$HOME/bin
+
+# Oracle
+COMMAND_SQLPLUS=`which sqlplus64`
+if [ "$?" -eq "0" ]; then
+  export ORACLE_HOME=`echo $(readlink -f $COMMAND_SQLPLUS) | sed 's/\/bin\/sqlplus//g'`
+  export LD_LIBRARY_PATH="$ORACLE_HOME/lib"
+  export TNS_ADMIN="$ORACLE_HOME/network/admin"
+  export NLS_LANG="Japanese_Japan.AL32UTF8"
+fi
