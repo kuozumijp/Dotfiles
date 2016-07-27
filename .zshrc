@@ -1,5 +1,5 @@
 #
-# kuozumijp .zshrc $Id$
+# kuozumijp .zshrc
 #
 
 export PATH=$PATH:$HOME/bin
