@@ -58,6 +58,7 @@ brew cask install box-sync
 brew cask install coda
 brew cask install cyberduck
 brew cask install day-o
+brew cask install docker
 brew cask install dropbox
 brew cask install firefox
 brew cask install google-japanese-ime
@@ -80,7 +81,7 @@ brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install squidman
 brew cask install trailer
-brew cask install virtualbox
+#brew cask install virtualbox
 brew cask install vlc
 brew cask install wireshark
 brew cask install xtrafinder
