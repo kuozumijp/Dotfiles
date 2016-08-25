@@ -34,6 +34,8 @@ brew install multitail
 brew install mosh
 brew install peco
 brew install reattach-to-user-namespace
+brew install rbenv
+brew install ruby-build
 brew install sqlite3
 brew install tmux
 brew install tree
