@@ -159,6 +159,10 @@ au BufNewFile,BufRead *.pm    :set ft=perl
 au BufNewFile,BufRead *.SQL   :set ft=sql
 
 "------------------------------------------------------------------------
+" ruby
+au BufNewFile,BufRead *.rb   :set ft=ruby
+
+"------------------------------------------------------------------------
 " javascript
 au BufNewFile,BufRead *.js   :set ft=javascript
 
