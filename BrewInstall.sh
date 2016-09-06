@@ -55,7 +55,6 @@ brew cask install astah-community
 brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
-#brew cask install boot2docker
 brew cask install box-sync
 brew cask install clementine
 brew cask install coda
@@ -75,7 +74,6 @@ brew cask install iterm2
 brew cask install java
 brew cask install kindle
 brew cask install kitematic
-brew cask install macdown
 brew cask install maczip4win
 brew cask install messenger
 brew cask install mysqlworkbench
@@ -84,7 +82,6 @@ brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install squidman
 brew cask install trailer
-#brew cask install virtualbox
 brew cask install vlc
 brew cask install wireshark
 brew cask install xtrafinder
