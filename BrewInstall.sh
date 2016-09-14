@@ -63,6 +63,7 @@ brew cask install day-o
 brew cask install docker
 brew cask install dropbox
 brew cask install firefox
+brew cask install genymotion
 brew cask install google-japanese-ime
 brew cask install ifunbox
 brew cask install imageoptim
