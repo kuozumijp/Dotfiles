@@ -2,7 +2,7 @@
 # kuozumijp .zshrc.local for mac
 #
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_11_2
+export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_12_1
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
@@ -24,8 +24,14 @@ fi
 COMMAND_SQLPLUS=`which sqlplus`
 if [ "$?" -eq "0" ]; then
   export ORACLE_HOME=`echo $(readlink -f $COMMAND_SQLPLUS) | sed 's/\/sqlplus$//g'`
-  export DYLD_LIBRARY_PATH=$ORACLE_HOME
+  if [ -n "$DYLD_LIBRARY_PATH" ]; then
+    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ORACLE_HOME
+  else
+    export DYLD_LIBRARY_PATH=$ORACLE_HOME
+  fi
   export TNS_ADMIN="$ORACLE_HOME/network/admin"
+  export OCI_LIB_DIR=$ORACLE_HOME
+  export OCI_INC_DIR="$ORACLE_HOME/sdk/include"
   export NLS_LANG="Japanese_Japan.AL32UTF8"
 fi
 
