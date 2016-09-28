@@ -14,6 +14,8 @@
 	su = submodule update
 	cl = clone --recursive
 	pr = fetch origin '+refs/pull/*:refs/remotes/pr/*'
+[core]
+	quotepath = false
 [github]
 	user = user
 [pager]
