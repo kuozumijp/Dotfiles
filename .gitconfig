@@ -24,9 +24,7 @@
 	si = submodule init
 	su = submodule update
 	cl = clone --recursive
-	bk = "!f() { git branch $1_bk`date \"+%Y%m%d%H%M%S\"`$2; }; f"
-	ｐｒ = "!f() { git fetch $1 '+refs/pull/*:refs/remotes/pr/*'; }; f"
-	#pr = fetch origin '+refs/pull/*:refs/remotes/pr/*'
+	pr = "!f() { git fetch $1 '+refs/pull/*:refs/remotes/pr/*'; }; f"
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore
