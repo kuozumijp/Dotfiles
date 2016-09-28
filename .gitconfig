@@ -1,21 +1,33 @@
+[include]
+	path = .gitconfig.local
 [color]
 	status = auto
 	diff = auto
 	branch = auto
 	interactive = auto
 	grep = auto
+[push]
+	default = tracking
+[branch]
+	autosetuprebase = always
+[merge]
+	ff = false
+[pull]
+	rebase = true
 [alias]
 	co = checkout
 	ci = commit -a
+	s = status --short --branch
 	st = status
-	up = pull --rebase
-	br = branch
+	b = branch
+	br = browse-remote
 	si = submodule init
 	su = submodule update
 	cl = clone --recursive
 	pr = fetch origin '+refs/pull/*:refs/remotes/pr/*'
 [core]
 	quotepath = false
+	excludesfile = ~/.gitignore
 [github]
 	user = user
 [pager]
@@ -24,3 +36,12 @@
 	diff = diff-highlight | less
 [diff]
 	compactionHeuristic = true
+
+# git-browse-remote
+# http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804
+[web]
+	browser = google-chrome
+[browse-remote "github.com"]
+        top = https://{host}/{path}
+        ref = https://{host}/{path}/tree/{short_ref}
+        rev = https://{host}/{path}/commit/{commit}
