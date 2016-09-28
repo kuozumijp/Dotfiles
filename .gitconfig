@@ -36,6 +36,8 @@
 	diff = diff-highlight | less
 [diff]
 	compactionHeuristic = true
+[interactive]
+	diffFilter = diff-highlight
 
 # git-browse-remote
 # http://subtech.g.hatena.ne.jp/motemen/20120917/1347889804
