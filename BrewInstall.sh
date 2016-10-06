@@ -2,7 +2,7 @@
 brew update
 
 # Update already-installed formula
-brew upgrade --all
+brew upgrade
 
 # Add Repository
 brew tap homebrew/dupes || true
