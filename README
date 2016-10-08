@@ -2,6 +2,6 @@ My DotFiles
 
 @ Please, each modification
 -- .gitconfig
-$ git config --global user.email "Your email"
-$ git config --global user.name "Your name"
-$ git config --global github.token "Your Githubb-Token"
+$ git config --file ~/.gitconfig.local user.email "Your email"
+$ git config --file ~/.gitconfig.local user.name "Your name"
+$ git config --file ~/.gitconfig.local github.token "Your Githubb-Token"
