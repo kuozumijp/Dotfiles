@@ -202,6 +202,11 @@ imap '' ''<Left>
 imap "" ""<Left>
 
 "------------------------------------------------------------------------
+" caw.vim
+nmap <C-K> <Plug>(caw:i:toggle)
+vmap <C-K> <Plug>(caw:i:toggle)
+
+"------------------------------------------------------------------------
 " vimtab関連
 if has('mac')
   nnoremap <C-t> :tabnew<Return>
