@@ -9,8 +9,8 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # aliaes
 compdef mosh=ssh
-compdef hub=git
 
+alias git="hub"
 alias vi="TERM=xterm-color /usr/local/bin/vim"
 alias vim="TERM=xterm-color /usr/local/bin/vim"
 alias grep="/usr/local/bin/ggrep"
