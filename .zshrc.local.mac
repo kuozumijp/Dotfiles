@@ -19,7 +19,9 @@ alias readlink="greadlink"
 if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
-fpath=($HOME/.zsh/completions $fpath)
+if [ -e $HOME/.zsh/completions ]; then
+    fpath=($HOME/.zsh/completions $fpath)
+fi
 
 # hub
 function git() {
