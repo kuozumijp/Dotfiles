@@ -60,6 +60,7 @@ brew cask install clementine
 brew cask install coda
 brew cask install cyberduck
 brew cask install day-o
+brew cask install dash
 brew cask install docker
 brew cask install dropbox
 brew cask install firefox
