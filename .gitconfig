@@ -20,7 +20,7 @@
 	s = status --short --branch
 	st = status
 	b = branch
-	br = browse-remote
+	r = remote -v
 	si = submodule init
 	su = submodule update
 	cl = clone --recursive
