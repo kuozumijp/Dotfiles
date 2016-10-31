@@ -87,7 +87,7 @@ brew cask install squidman
 brew cask install trailer
 brew cask install vlc
 brew cask install wireshark
-brew cask install xtrafinder
+#brew cask install xtrafinder
 brew cask install xquartz
 
 # Remove outdated versions
