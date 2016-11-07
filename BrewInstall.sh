@@ -58,6 +58,7 @@ brew cask install bartender
 brew cask install bettertouchtool
 brew cask install box-sync
 brew cask install clementine
+brew cask install coccinellida
 brew cask install coda
 brew cask install cyberduck
 brew cask install day-o
