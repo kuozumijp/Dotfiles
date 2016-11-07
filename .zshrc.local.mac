@@ -41,6 +41,14 @@ if [ "$?" -eq "0" ]; then
   export OCI_LIB_DIR=$ORACLE_HOME
   export OCI_INC_DIR="$ORACLE_HOME/sdk/include"
   export NLS_LANG="Japanese_Japan.AL32UTF8"
+
+  # rlwrap
+  COMMAND_RLWRAP=`which rlwrap`
+  if [ "$?" -eq "0" ]; then
+    alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus $COMMAND_SQLPLUS /nolog"
+  else
+    alias sqlplus="$COMMAND_SQLPLUS /nolog"
+  fi
 fi
 
 # tmuxのステータスバーにHostを表示する
