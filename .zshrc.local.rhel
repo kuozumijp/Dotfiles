@@ -14,4 +14,12 @@ if [ "$?" -eq "0" ]; then
   export LD_LIBRARY_PATH="$ORACLE_HOME/lib"
   export TNS_ADMIN="$ORACLE_HOME/network/admin"
   export NLS_LANG="Japanese_Japan.AL32UTF8"
+
+  # rlwrap
+  COMMAND_RLWRAP=`which rlwrap`
+  if [ "$?" -eq "0" ]; then
+    alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus $COMMAND_SQLPLUS /nolog"
+  else
+    alias sqlplus="$COMMAND_SQLPLUS /nolog"
+  fi
 fi
