@@ -108,16 +108,6 @@ alias vim="TERM=xterm-color vim"
 alias make="gmake"
 alias svn="env LANG=C svn"
 
-COMMAND_SQLPLUS=`which sqlplus64`
-if [ "$?" -eq "0" ]; then
-  COMMAND_RLWRAP=`which rlwrap`
-  if [ "$?" -eq "0" ]; then
-    alias sqlplus="$COMMAND_RLWRAP -pGreen -if $HOME/.rlwrap/sqlplus $COMMAND_SQLPLUS /nolog"
-  else
-    alias sqlplus="$COMMAND_SQLPLUS /nolog"
-  fi
-fi
-
 COMMAND_DIFF=`which colordiff`
 if [ "$?" -eq "0" ]; then
   alias diff="$COMMAND_DIFF -u"
