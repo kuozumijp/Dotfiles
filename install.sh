@@ -16,6 +16,7 @@ cp ./.tmux.conf ~/
 
 if [ "$(uname)" == 'Darwin' ]; then
   cp ./.zshrc.local.mac ~/.zshrc.local
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
 else
