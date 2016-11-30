@@ -19,6 +19,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
+  sudo yum install go
 else
   echo "this platform ($(uname -a)) is .zshrc.local not supported."
 fi
