@@ -2,6 +2,9 @@
 # kuozumijp .zshrc.local.rhel
 #
 
+export GOROOT=/usr/lib/golang
+export GOPATH=/usr/local/gocode
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 export PATH=$HOME/.vvm/bin:$HOME/.vvm/vims/current/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH
