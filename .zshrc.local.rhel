@@ -27,3 +27,13 @@ if [ "$?" -eq "0" ]; then
     alias oracle="$COMMAND_SQLPLUS /nolog"
   fi
 fi
+
+# peco
+function peco-history-selection() {
+    BUFFER=`history -n 1 | /usr/bin/tac | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
