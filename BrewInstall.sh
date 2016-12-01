@@ -13,6 +13,7 @@ brew tap someposer/homebrew-mmbd
 # Packages for development
 brew install android-sdk
 brew install asciinema
+brew install automake
 brew install homebrew/versions/appledoc22
 brew install awscli
 brew install bash-completion
@@ -21,6 +22,7 @@ brew install colordiff
 brew install carthage
 brew install coreutils
 brew install flow
+brew install gcc
 brew install ghq
 brew install git
 brew install graphviz
