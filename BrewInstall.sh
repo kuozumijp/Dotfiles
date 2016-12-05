@@ -22,7 +22,6 @@ brew install colordiff
 brew install carthage
 brew install coreutils
 brew install flow
-brew install gcc
 brew install ghq
 brew install git
 brew install graphviz
