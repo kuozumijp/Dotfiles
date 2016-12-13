@@ -40,6 +40,7 @@ brew install reattach-to-user-namespace
 brew install rbenv
 brew install redis
 brew install ruby-build
+brew install s3cmd
 brew install sqlite3
 brew install tmux
 brew install tree
