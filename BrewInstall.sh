@@ -9,6 +9,7 @@ brew tap homebrew/dupes || true
 brew tap homebrew/binary || true
 brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
+brew tap universal-ctags/universal-ctags
 
 # Packages for development
 brew install android-sdk
@@ -21,6 +22,7 @@ brew install codefirst/sparkling/brew-sparkling
 brew install colordiff
 brew install carthage
 brew install coreutils
+brew install --HEAD universal-ctags
 brew install flow
 brew install ghq
 brew install git
