@@ -15,3 +15,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'soramugi/auto-ctags.vim'
