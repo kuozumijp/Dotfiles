@@ -18,3 +18,6 @@ repo = 'tyru/caw.vim'
 
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
