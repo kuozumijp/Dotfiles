@@ -3,6 +3,7 @@
 #
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_12_1
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
