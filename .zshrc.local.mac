@@ -2,11 +2,12 @@
 # kuozumijp .zshrc.local for mac
 #
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH:/usr/local/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_12_1
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
+export BREW_PREFIX=$(brew --prefix)
+export PATH=$HOME/.nodebrew/current/bin:$PATH:$BREW_PREFIX/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_12_1
+export PATH=$BREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH
+export MANPATH=$BREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$BREW_PREFIX/opt/android-sdk
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 # aliaes
@@ -15,10 +16,10 @@ compdef mosh=ssh
 alias git="hub"
 alias vi="TERM=xterm-color /usr/local/bin/vim"
 alias vim="TERM=xterm-color /usr/local/bin/vim"
-alias grep="/usr/local/bin/ggrep"
+alias grep="${BREW_PREFIX}/bin/ggrep"
 alias readlink="greadlink"
 
-if [ -e /usr/local/share/zsh-completions ]; then
+if [ -e $BREW_PREFIX/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 if [ -e $HOME/.zsh/completions ]; then
@@ -94,7 +95,7 @@ bindkey '^R' peco-history-selection
 # rbenv
 eval export PATH="${HOME}/.rbenv/shims:${PATH}"
 export RBENV_SHELL=zsh
-source '/usr/local/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.zsh'
+source '${BREW_PREFIX}/Cellar/rbenv/1.1.0/libexec/../completions/rbenv.zsh'
 command rbenv rehash 2>/dev/null
 rbenv() {
   local command
