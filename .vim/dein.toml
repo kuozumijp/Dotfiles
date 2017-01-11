@@ -8,6 +8,9 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'vim-scripts/sudo.vim'
 
 [[plugins]]
+repo = 'mopp/autodirmake.vim'
+
+[[plugins]]
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
