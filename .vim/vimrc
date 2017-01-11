@@ -172,6 +172,10 @@ au BufNewFile,BufRead *.rb   :set ft=ruby
 au BufNewFile,BufRead *.js   :set ft=javascript
 
 "------------------------------------------------------------------------
+" html
+au BufNewFile,BufRead *.ejs  :set ft=html
+
+"------------------------------------------------------------------------
 " snippetsEmu 関連 環境変数としてシグネチャを記述
 let AUTHOR = 'Keisuke Uozumi'
 let MAILADDRESS = 'eroejp@gmail.com'
