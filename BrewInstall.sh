@@ -10,6 +10,7 @@ brew tap homebrew/binary || true
 brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
+brew tap sanemat/font
 
 # Packages for development
 brew install android-sdk
@@ -24,6 +25,7 @@ brew install carthage
 brew install coreutils
 brew install --HEAD universal-ctags
 brew install flow
+brew install --use-gcc fontforge
 brew install ghq
 brew install git
 brew install graphviz
@@ -41,6 +43,7 @@ brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install redis
+brew install ricty
 brew install ruby-build
 brew install s3cmd
 brew install sqlite3
