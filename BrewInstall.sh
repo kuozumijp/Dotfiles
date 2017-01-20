@@ -11,6 +11,7 @@ brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
+brew tap caskroom/fonts
 
 # Packages for development
 brew install android-sdk
