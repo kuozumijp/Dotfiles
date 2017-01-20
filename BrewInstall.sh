@@ -12,6 +12,7 @@ brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
 brew tap caskroom/fonts
+brew tap waltarix/homebrew-customs
 
 # Packages for development
 brew install android-sdk
@@ -48,12 +49,14 @@ brew install ricty
 brew install ruby-build
 brew install s3cmd
 brew install sqlite3
-brew install tmux
+#brew install tmux
+brew install waltarix/homebrew-customs/tmux
 brew install tree
 brew install vim --with-lua
 brew install watchman
 brew install wget
-brew install zsh
+#brew install zsh
+brew install waltarix/homebrew-customs/zsh
 brew install zsh-completions
 
 # .dmg from brew-cask
