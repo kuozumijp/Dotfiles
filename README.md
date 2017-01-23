@@ -1,6 +1,7 @@
 My DotFiles [![Gitter chat][gitter-image]][gitter-url]
 
 @ Please, each modification
+
 -- .gitconfig
 ```
 $ git config --file ~/.gitconfig.local user.email "Your email"
