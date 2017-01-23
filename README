@@ -5,3 +5,5 @@ My DotFiles
 $ git config --file ~/.gitconfig.local user.email "Your email"
 $ git config --file ~/.gitconfig.local user.name "Your name"
 $ git config --file ~/.gitconfig.local github.token "Your Githubb-Token"
+
+Join the chat at https://gitter.im/kuozumijp/Dotfiles
