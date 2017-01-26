@@ -18,7 +18,7 @@ brew tap waltarix/homebrew-customs
 brew install android-sdk
 brew install asciinema
 brew install automake
-brew install homebrew/versions/appledoc22
+brew install homebrew/core/appledoc
 brew install awscli
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
