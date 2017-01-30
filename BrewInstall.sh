@@ -40,7 +40,7 @@ brew install libgcrypt
 brew install libmmbd
 brew install markdown
 brew install multitail
-brew install mosh
+brew install mosh --devel
 brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
