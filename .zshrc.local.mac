@@ -9,6 +9,12 @@ export MANPATH=$BREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH
 export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
 export ANDROID_HOME=$BREW_PREFIX/opt/android-sdk
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+export LDFLAGS:  -L/usr/local/opt/sqlite/lib
+export CPPFLAGS: -I/usr/local/opt/sqlite/include
+export LDFLAGS="-L${BREW_PREFIX}/opt/sqlcipher/lib"
+export CPPFLAGS="-I${BREW_PREFIX}/opt/sqlcipher/include"
+export PKG_CONFIG_PATH="${BREW_PREFIX}/opt/sqlite/lib/pkgconfig"
+
 
 # aliaes
 compdef mosh=ssh
