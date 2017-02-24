@@ -165,15 +165,20 @@ au BufNewFile,BufRead *.SQL   :set ft=sql
 
 "------------------------------------------------------------------------
 " ruby
-au BufNewFile,BufRead *.rb   :set ft=ruby
+au BufNewFile,BufRead *.rb    :set ft=ruby
 
 "------------------------------------------------------------------------
 " javascript
-au BufNewFile,BufRead *.js   :set ft=javascript
+au BufNewFile,BufRead *.js    :set ft=javascript
 
 "------------------------------------------------------------------------
 " html
-au BufNewFile,BufRead *.ejs  :set ft=html
+au BufNewFile,BufRead *.ejs   :set ft=html
+
+"------------------------------------------------------------------------
+" json
+au BufNewFile,BufRead *.json   :set ft=json
+au BufNewFile,BufRead *.jsonp  :set ft=json
 
 "------------------------------------------------------------------------
 " snippetsEmu 関連 環境変数としてシグネチャを記述
