@@ -10,6 +10,21 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH
 export PATH=$PATH:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/pgsql/bin:/usr/X11R6/bin:/usr/local/etc:/etc:/etc/rc.d:/etc/rc.d/init.d:/home/y/bin64:/home/y/bin:$HOME/bin
 
+# alias
+alias git="hub"
+
+if [ -e $HOME/.zsh/zsh-completions ]; then
+    fpath=($HOME/.zsh/zsh-completions $fpath)
+fi
+if [ -e $HOME/.zsh/completions ]; then
+    fpath=($HOME/.zsh/completions $fpath)
+fi
+
+# hub
+function git() {
+  hub "$@"
+}
+
 # Oracle
 COMMAND_SQLPLUS=`which sqlplus64`
 if [ "$?" -eq "0" ]; then
