@@ -14,7 +14,7 @@ export PATH=$PATH:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/pgsql/bin:/usr
 alias git="hub"
 
 if [ -e $HOME/.zsh/zsh-completions ]; then
-    fpath=($HOME/.zsh/zsh-completions $fpath)
+    fpath=($HOME/.zsh/zsh-completions/src $fpath)
 fi
 if [ -e $HOME/.zsh/completions ]; then
     fpath=($HOME/.zsh/completions $fpath)
