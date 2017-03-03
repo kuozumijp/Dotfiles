@@ -56,6 +56,7 @@ brew install watchman
 brew install wget
 brew install zsh
 brew install zsh-completions
+brew install zplug
 
 # .dmg from brew-cask
 brew cask install alfred
