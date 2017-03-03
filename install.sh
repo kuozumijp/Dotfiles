@@ -29,10 +29,16 @@ if [ "$(uname)" == 'Darwin' ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
+
   # zshcompletions install
   git clone git://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
+
+  # zplug install
+  curl -sL zplug.sh/installer | zsh
+  
   # vvm - vim version manager
   curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup
+
   # go
   sudo yum install go
 else
