@@ -182,5 +182,10 @@ case "${TERM}" in
         }
 esac
 
+# zplug install
+source ~/.zplug/init.zsh
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug load --verbose
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local # 設定ファイルのinclude
 typeset -U path cdpath fpath manpath # 重複PATHの削除
