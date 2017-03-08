@@ -22,6 +22,9 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/plugins/
 # nodebrew install
 curl -L git.io/nodebrew | perl - setup
 
+# zplug install
+curl -sL zplug.sh/installer | zsh
+
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
   cp ./.zshrc.local.mac ~/.zshrc.local
@@ -32,9 +35,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
 
   # zshcompletions install
   git clone git://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
-
-  # zplug install
-  curl -sL zplug.sh/installer | zsh
   
   # vvm - vim version manager
   curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup
