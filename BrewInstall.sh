@@ -55,7 +55,7 @@ brew install vim --with-lua
 brew install watchman
 brew install wget
 brew install zsh
-brew install zsh-completions
+#brew install zsh-completions
 brew install zplug
 
 # .dmg from brew-cask
