@@ -23,9 +23,6 @@ alias vim="TERM=xterm-color /usr/local/bin/vim"
 alias grep="${BREW_PREFIX}/bin/ggrep"
 alias readlink="greadlink"
 
-if [ -e $BREW_PREFIX/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
-fi
 if [ -e $HOME/.zsh/completions ]; then
     fpath=($HOME/.zsh/completions $fpath)
 fi
