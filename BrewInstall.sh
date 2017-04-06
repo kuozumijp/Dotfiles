@@ -90,6 +90,7 @@ brew cask install iterm2
 brew cask install java
 brew cask install kindle
 brew cask install kitematic
+brew cask install macs-fan-control
 brew cask install maczip4win
 brew cask install messenger
 brew cask install font-myrica
