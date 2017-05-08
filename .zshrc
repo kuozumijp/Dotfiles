@@ -27,6 +27,7 @@ fi
 # gitのステータスを表示
 autoload -Uz vcs_info
 setopt prompt_subst
+zstyle ':vcs_info:git:*:-all-' command =git
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
