@@ -5,8 +5,6 @@ brew update
 brew upgrade
 
 # Add Repository
-brew tap homebrew/dupes || true
-brew tap homebrew/binary || true
 brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
@@ -14,7 +12,6 @@ brew tap sanemat/font
 brew tap caskroom/fonts
 
 # Packages for development
-brew install android-sdk
 brew install asciinema
 brew install automake
 brew install homebrew/core/appledoc
@@ -61,6 +58,7 @@ brew install zplug
 # .dmg from brew-cask
 brew cask install alfred
 brew cask install amazon-music
+brew cask install android-sdk
 brew cask install android-studio
 brew cask install android-file-transfer
 brew cask install appcleaner
