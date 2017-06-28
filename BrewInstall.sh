@@ -78,6 +78,7 @@ brew cask install docker
 brew cask install dropbox
 brew cask install expo-xde
 brew cask install firefox
+brew cask install flume
 brew cask install gas-mask
 brew cask install genymotion
 brew cask install google-japanese-ime
