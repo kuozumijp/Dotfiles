@@ -67,6 +67,7 @@ brew cask install astah-community
 brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
+brew cask install bitbar
 brew cask install box-sync
 brew cask install clementine
 brew cask install coccinellida
