@@ -43,7 +43,7 @@ brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install redis
-brew install ricty
+brew install ricty --with-powerline
 brew install ruby-build
 brew install s3cmd
 brew install sqlite3
