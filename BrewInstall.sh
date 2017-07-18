@@ -83,6 +83,7 @@ brew cask install flume
 brew cask install gas-mask
 brew cask install genymotion
 brew cask install google-japanese-ime
+brew cask install hyperswitch
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install insomniax
