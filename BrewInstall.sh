@@ -106,6 +106,7 @@ brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install squidman
 brew cask install totalspaces
 brew cask install trailer
+brew cask install tunnelblic
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install wireshark
