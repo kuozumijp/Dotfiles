@@ -23,7 +23,7 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/plugins/
 curl -L git.io/nodebrew | perl - setup
 
 # zplug install
-curl -sL zplug.sh/installer | zsh
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
