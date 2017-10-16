@@ -97,6 +97,7 @@ brew cask install kitematic
 brew cask install macs-fan-control
 brew cask install maczip4win
 brew cask install messenger
+brew cask install michaelvillar-timer
 brew cask install font-myrica
 brew cask install font-myricam
 brew cask install mysqlworkbench
