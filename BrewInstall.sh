@@ -5,7 +5,6 @@ brew update
 brew upgrade
 
 # Add Repository
-brew tap homebrew/boneyard
 brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
@@ -47,7 +46,7 @@ brew install redis
 brew install ricty --with-powerline
 brew install ruby-build
 brew install s3cmd
-brew install s3sync
+#brew install s3sync
 brew install sqlite3
 brew install tmux
 brew install tree
