@@ -24,3 +24,6 @@ repo = 'soramugi/auto-ctags.vim'
 
 [[plugins]]
 repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'fatih/vim-go'
