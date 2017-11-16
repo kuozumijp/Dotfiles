@@ -35,6 +35,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
 
   # zshcompletions install
+  # zplugで入れるからここでは除外、必要に応じてコメントを外す
   #git clone git://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
   
   # vvm - vim version manager
