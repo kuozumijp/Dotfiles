@@ -188,7 +188,7 @@ source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "zchee/go-zsh-completions"
+zplug "zchee/go-zsh-completions", use:src/
 zplug "mollifier/cd-gitroot"
 zplug "peco/peco", from:gh-r, as:command, use:"*linux*amd64*"
 zplug "b4b4r07/enhancd", use:init.sh
