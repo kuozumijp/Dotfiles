@@ -186,8 +186,9 @@ esac
 # zplug install
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-completions"
-zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "zchee/go-zsh-completions"
 zplug "b4b4r07/enhancd", use:init.sh
 
 if ! zplug check --verbose; then
