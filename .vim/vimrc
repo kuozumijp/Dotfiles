@@ -181,6 +181,10 @@ au BufNewFile,BufRead *.json   :set ft=json
 au BufNewFile,BufRead *.jsonp  :set ft=json
 
 "------------------------------------------------------------------------
+" go
+au BufNewFile,BufRead *.go   :set ft=go
+
+"------------------------------------------------------------------------
 " snippetsEmu 関連 環境変数としてシグネチャを記述
 let AUTHOR = 'Keisuke Uozumi'
 let MAILADDRESS = 'eroejp@gmail.com'
