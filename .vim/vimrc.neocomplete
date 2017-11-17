@@ -89,5 +89,6 @@ autocmd FileType php        setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c          setlocal omnifunc=ccomplete#Complete
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
 autocmd FileType java       setlocal omnifunc=javacomplete#Complete
+autocmd FileType go         setlocal omnifunc=go#complete#Complete
 
 let g:nodejs_complete_config = {'js_compl_fn': 'jscomplete#CompleteJS', 'max_node_compl_len': 15}
