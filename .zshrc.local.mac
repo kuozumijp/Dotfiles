@@ -17,7 +17,6 @@ export PKG_CONFIG_PATH="${BREW_PREFIX}/opt/sqlite/lib/pkgconfig"
 # aliaes
 compdef mosh=ssh
 
-alias git="hub"
 alias vi="TERM=xterm-color /usr/local/bin/vim"
 alias vim="TERM=xterm-color /usr/local/bin/vim"
 alias grep="${BREW_PREFIX}/bin/ggrep"
@@ -28,9 +27,13 @@ if [ -e $HOME/.zsh/completions ]; then
 fi
 
 # hub
-function git() {
- hub "$@"
-}
+COMMAND_HUB=`which hub`
+if [ "$?" -eq "0" ]; then
+  alias git="hub"
+  function git() {
+    $COMMAND_HUB "$@"
+  }
+fi
 
 # Oracle
 COMMAND_SQLPLUS=`which sqlplus`
