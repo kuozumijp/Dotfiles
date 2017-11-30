@@ -23,6 +23,8 @@ if [ "$?" -eq "0" ]; then
   function git() {
     $COMMAND_HUB "$@"
   }
+  
+  export BROWSER=iterm
 fi
 
 # Oracle
