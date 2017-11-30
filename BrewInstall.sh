@@ -28,6 +28,7 @@ brew install ghq
 brew install git
 brew install glide
 brew install gnu-sed --with-default-names
+brew install go
 brew install graphviz
 brew install homebrew/dupes/grep
 brew install hg
