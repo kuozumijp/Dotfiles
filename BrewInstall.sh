@@ -26,6 +26,7 @@ brew install flow
 brew install --use-gcc fontforge
 brew install ghq
 brew install git
+brew install glide
 brew install gnu-sed --with-default-names
 brew install graphviz
 brew install homebrew/dupes/grep
