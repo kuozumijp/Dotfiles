@@ -42,9 +42,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
 
   # go
   sudo yum install go
-
-  # glide
-  curl https://glide.sh/get | sh
 else
   echo "this platform ($(uname -a)) is .zshrc.local not supported."
 fi
