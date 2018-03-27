@@ -192,6 +192,7 @@ zplug "zchee/go-zsh-completions", use:src/
 zplug "mollifier/cd-gitroot"
 zplug "peco/peco", from:gh-r, as:command, use:"*linux*amd64*"
 zplug "b4b4r07/enhancd", use:init.sh
+zplug "zsh-users/zsh-autosuggestions"
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
