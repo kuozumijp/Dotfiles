@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Make sure using latest Homebrew
 brew update
 
