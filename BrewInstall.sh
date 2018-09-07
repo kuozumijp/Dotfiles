@@ -135,6 +135,15 @@ mas install 1024974133
 # 夜フクロウ
 mas install 428834068
 
+# Keynote
+mas install 409183694
+
+# Numbers
+mas install 409203825
+
+# Pages
+mas install 409201541
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
