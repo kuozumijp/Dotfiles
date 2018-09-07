@@ -122,6 +122,19 @@ brew cask install wireshark
 #brew cask install xtrafinder
 brew cask install xquartz
 
+# App Store
+# slack
+mas install 803453959
+
+# Xcode
+mas install 497799835
+
+# Mountain Duck
+mas install 1024974133
+
+# 夜フクロウ
+mas install 428834068
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
