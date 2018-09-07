@@ -43,7 +43,7 @@ brew install libmmbd
 brew install markdown
 brew install multitail
 brew install mosh --devel
-brew install peco
+#brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install redis
@@ -68,7 +68,7 @@ brew cask install android-sdk
 brew cask install android-studio
 brew cask install android-file-transfer
 brew cask install appcleaner
-brew cask install astah-community
+#brew cask install astah-community
 brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
@@ -77,7 +77,7 @@ brew cask install box-sync
 brew cask install clementine
 brew cask install coccinellida
 brew cask install coda
-brew cask install cyberduck
+#brew cask install cyberduck
 brew cask install day-o
 brew cask install dash
 brew cask install docker
@@ -87,13 +87,14 @@ brew cask install firefox
 brew cask install flume
 brew cask install gas-mask
 brew cask install genymotion
+brew cask install google-chrome --force
 brew cask install google-japanese-ime
 brew cask install hyperswitch
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install insomniax
 brew cask install intel-power-gadget
-brew cask install intellij-idea-ce
+#brew cask install intellij-idea-ce
 brew cask install ip-in-menu-bar
 brew cask install iterm2
 brew cask install java
