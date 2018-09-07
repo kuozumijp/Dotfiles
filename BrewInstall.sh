@@ -89,7 +89,7 @@ brew cask install firefox
 brew cask install flume
 brew cask install gas-mask
 brew cask install genymotion
-brew cask install google-chrome --force
+#brew cask install google-chrome --force
 brew cask install google-japanese-ime
 brew cask install hyperswitch
 brew cask install ifunbox
