@@ -80,7 +80,7 @@ brew cask install clementine
 brew cask install coccinellida
 brew cask install coda
 #brew cask install cyberduck
-brew cask install day-o
+brew cask install day-o --force --no-quarantine
 brew cask install dash --force --no-quarantine
 brew cask install docker
 brew cask install dropbox
@@ -91,7 +91,7 @@ brew cask install gas-mask
 brew cask install genymotion
 brew cask install google-chrome --force --no-quarantine
 brew cask install google-japanese-ime
-brew cask install hyperswitch
+brew cask install hyperswitch --force --no-quarantine
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install insomniax --force --no-quarantine
@@ -126,6 +126,9 @@ brew cask install xquartz
 # slack
 mas install 803453959
 
+# trello
+mas install 1278508951
+
 # Xcode
 mas install 497799835
 
@@ -143,6 +146,9 @@ mas install 409203825
 
 # Pages
 mas install 409201541
+
+# コイン相場
+mas install 1331400450
 
 # Remove outdated versions
 brew cleanup
