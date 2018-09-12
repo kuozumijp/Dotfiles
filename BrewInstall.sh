@@ -150,6 +150,9 @@ mas install 409201541
 # コイン相場
 mas install 1331400450
 
+# omniplan
+mas install 1040002810
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
