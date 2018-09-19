@@ -58,6 +58,7 @@ brew install tree
 brew install vim --with-lua
 brew install watchman
 brew install wget
+brew install xcodegen
 brew install zsh
 #brew install zsh-completions
 brew install zplug
