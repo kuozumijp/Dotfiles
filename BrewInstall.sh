@@ -83,8 +83,8 @@ brew cask install coda
 #brew cask install cyberduck
 brew cask install day-o --force --no-quarantine
 brew cask install dash --force --no-quarantine
-brew cask install docker
-brew cask install dropbox
+brew cask install docker --force --no-quarantine
+brew cask install dropbox --force --no-quarantine
 brew cask install expo-xde
 brew cask install firefox
 brew cask install flume
