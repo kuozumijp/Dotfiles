@@ -44,7 +44,7 @@ brew install markdown
 brew install mas
 brew install multitail
 brew install mosh --devel
-#brew install peco
+brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install redis
