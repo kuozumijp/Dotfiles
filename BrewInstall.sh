@@ -47,6 +47,7 @@ brew install mosh --devel
 brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
+brew install rbenv-communal-gems
 brew install redis
 brew install ricty --with-powerline
 brew install ruby-build
