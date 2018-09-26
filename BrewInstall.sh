@@ -155,6 +155,9 @@ mas install 1331400450
 # omniplan
 mas install 1040002810
 
+# Agenda
+mas install 1287445660
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
