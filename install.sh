@@ -32,16 +32,9 @@ if [ "$(uname)" == 'Darwin' ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
-
-  # zshcompletions install
-  # zplugで入れるからここでは除外、必要に応じてコメントを外す
-  #git clone git://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
   
   # vvm - vim version manager
   curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup
-
-  # go
-  sudo yum install go
 else
   echo "this platform ($(uname -a)) is .zshrc.local not supported."
 fi
