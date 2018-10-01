@@ -58,6 +58,7 @@ brew install tmux
 brew install tree
 brew install vim --with-lua
 brew install watchman
+brew install webp
 brew install wget
 brew install xcodegen
 brew install zsh
@@ -120,6 +121,7 @@ brew cask install trailer
 brew cask install tunnelblick
 brew cask install visual-studio-code
 brew cask install vlc
+brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark
 #brew cask install xtrafinder
 brew cask install xquartz
