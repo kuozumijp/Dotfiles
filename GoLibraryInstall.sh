@@ -2,4 +2,4 @@
 
 go get github.com/motemen/ghq
 go get github.com/github/hub
-go install github.com/golang/dep/cmd/dep
+go get -u github.com/golang/dep/cmd/dep
