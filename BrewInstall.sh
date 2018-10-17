@@ -70,7 +70,7 @@ brew cask install 1password --force --no-quarantine
 brew cask install alfred
 brew cask install amazon-music
 brew cask install android-sdk
-brew cask install android-studio
+brew cask install android-studio --force --no-quarantine
 brew cask install android-file-transfer
 brew cask install appcleaner
 #brew cask install astah-community
@@ -115,14 +115,14 @@ brew cask install mysqlworkbench
 brew cask install notifyr
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
-brew cask install squidman
+brew cask install squidman --force --no-quarantine
 brew cask install totalspaces
 brew cask install trailer
 brew cask install tunnelblick
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install webpquicklook --force --no-quarantine
-brew cask install wireshark
+brew cask install wireshark --force --no-quarantine
 #brew cask install xtrafinder
 brew cask install xquartz
 
