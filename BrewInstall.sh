@@ -163,6 +163,9 @@ mas install 1287445660
 # Affinity Photo
 mas install 824183456
 
+# Display Menu
+mas install 549083868
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
