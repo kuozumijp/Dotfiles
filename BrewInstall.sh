@@ -111,7 +111,7 @@ brew cask install messenger --force --no-quarantine
 brew cask install michaelvillar-timer
 brew cask install font-myrica
 brew cask install font-myricam
-brew cask install mysqlworkbench
+brew cask install mysqlworkbench --force --no-quarantine
 brew cask install notifyr
 brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
