@@ -67,8 +67,8 @@ brew install zplug
 
 # .dmg from brew-cask
 brew cask install 1password --force --no-quarantine
-brew cask install alfred
-brew cask install amazon-music
+brew cask install alfred --force --no-quarantine
+brew cask install amazon-music --force --no-quarantine
 brew cask install amazon-photos --force --no-quarantine
 brew cask install android-sdk
 brew cask install android-studio --force --no-quarantine
@@ -79,7 +79,7 @@ brew cask install atom
 brew cask install bartender --force --no-quarantine
 brew cask install bettertouchtool --force --no-quarantine
 brew cask install bitbar
-brew cask install box-sync
+brew cask install box-sync --force --no-quarantine
 brew cask install clementine
 brew cask install coccinellida
 brew cask install coda
@@ -89,12 +89,12 @@ brew cask install dash --force --no-quarantine
 brew cask install docker --force --no-quarantine
 brew cask install dropbox --force --no-quarantine
 brew cask install expo-xde
-brew cask install firefox
-brew cask install flume
-brew cask install gas-mask
-brew cask install genymotion
+brew cask install firefox --force --no-quarantine
+brew cask install flume --force --no-quarantine
+brew cask install gas-mask --force --no-quarantine
+brew cask install genymotion --force --no-quarantine
 brew cask install google-chrome --force --no-quarantine
-brew cask install google-japanese-ime
+brew cask install google-japanese-ime --force --no-quarantine
 brew cask install hyperswitch --force --no-quarantine
 brew cask install ifunbox
 brew cask install imageoptim
@@ -120,7 +120,7 @@ brew cask install squidman --force --no-quarantine
 brew cask install totalspaces
 brew cask install trailer
 brew cask install tunnelblick
-brew cask install visual-studio-code
+brew cask install visual-studio-code --force --no-quarantine
 brew cask install vlc
 brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark --force --no-quarantine
