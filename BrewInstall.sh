@@ -69,6 +69,7 @@ brew install zplug
 brew cask install 1password --force --no-quarantine
 brew cask install alfred
 brew cask install amazon-music
+brew cask install amazon-photos --force --no-quarantine
 brew cask install android-sdk
 brew cask install android-studio --force --no-quarantine
 brew cask install android-file-transfer
