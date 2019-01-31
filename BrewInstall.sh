@@ -73,7 +73,7 @@ brew cask install amazon-photos --force --no-quarantine
 brew cask install android-sdk
 brew cask install android-studio --force --no-quarantine
 brew cask install android-file-transfer
-brew cask install appcleaner
+brew cask install appcleaner --force --no-quarantine
 #brew cask install astah-community
 brew cask install atom
 brew cask install bartender --force --no-quarantine
@@ -90,6 +90,7 @@ brew cask install docker --force --no-quarantine
 brew cask install dropbox --force --no-quarantine
 brew cask install expo-xde
 brew cask install firefox --force --no-quarantine
+brew cask install fluid --force --no-quarantine
 brew cask install flume --force --no-quarantine
 brew cask install gas-mask --force --no-quarantine
 brew cask install genymotion --force --no-quarantine
@@ -102,7 +103,7 @@ brew cask install insomniax --force --no-quarantine
 brew cask install intel-power-gadget
 #brew cask install intellij-idea-ce
 brew cask install ip-in-menu-bar --force --no-quarantine
-brew cask install iterm2
+brew cask install iterm2 --force --no-quarantine
 brew cask install java
 #brew cask install kindle
 brew cask install kitematic --force --no-quarantine
