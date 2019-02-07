@@ -3,7 +3,7 @@
 #
 
 # use zsh
-ZSH=`grep \/zsh /etc/shells|grep -v '#'`
+ZSH=`grep \/zsh /etc/shells | grep -v '#' | tail -n 1`
 if [ "${ZSH}" != "" -a -f ~/.zshrc ]; then
     exec $ZSH
 fi
