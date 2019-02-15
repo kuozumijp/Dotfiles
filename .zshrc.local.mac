@@ -20,6 +20,8 @@ export PKG_CONFIG_PATH="${BREW_PREFIX}/opt/sqlite/lib/pkgconfig"
 zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 
+zplug-stdin
+
 # aliaes
 compdef mosh=ssh
 
