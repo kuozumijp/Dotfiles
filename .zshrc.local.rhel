@@ -20,6 +20,8 @@ fi
 zplug "peco/peco", from:gh-r, as:command, use:"*linux*amd64*"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*linux*amd64*"
 
+zplug-stdin
+
 # hub
 COMMAND_HUB=`which hub`
 if [ "$?" -eq "0" ]; then
