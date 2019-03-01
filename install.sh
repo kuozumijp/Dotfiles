@@ -15,7 +15,7 @@ cp ./.gitconfig ~/
 cp ./.tmux.conf ~/
 
 # zshcompletions install
-curl -L https://raw.githubusercontent.com/felixr/docker-zsh-completion/master/_docker > ~/.zsh/completions/_docker
+curl -L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker > ~/.zsh/completions/_docker
 curl -L https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion > ~/.zsh/completions/_hub
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/plugins/knife/_knife > ~/.zsh/completions/_knife
 
