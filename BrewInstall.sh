@@ -169,6 +169,9 @@ mas install 824183456
 # Display Menu
 mas install 549083868
 
+# skitch
+mas install 425955336
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
