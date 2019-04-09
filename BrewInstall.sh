@@ -166,6 +166,9 @@ mas install 1287445660
 # Affinity Photo
 mas install 824183456
 
+# Affinity Designer
+mas install 824171161
+
 # Display Menu
 mas install 549083868
 
