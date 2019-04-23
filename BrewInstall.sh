@@ -123,7 +123,7 @@ brew cask install totalspaces
 brew cask install trailer --force --no-quarantine
 brew cask install tunnelblick
 brew cask install visual-studio-code --force --no-quarantine
-brew cask install vlc
+brew cask install vlc --force --no-quarantine
 brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark --force --no-quarantine
 #brew cask install xtrafinder
