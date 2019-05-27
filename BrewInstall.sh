@@ -175,6 +175,9 @@ mas install 549083868
 # skitch
 mas install 425955336
 
+# Anti Sleep
+mas install 946798523
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
