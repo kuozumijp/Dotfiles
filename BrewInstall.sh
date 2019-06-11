@@ -42,6 +42,7 @@ brew install libgcrypt
 brew install libmmbd
 brew install markdown
 brew install mas
+brew install maven
 brew install multitail
 brew install mosh --devel
 brew install peco
