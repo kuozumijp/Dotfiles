@@ -37,6 +37,7 @@ brew install hg
 brew install hub
 brew install jq
 brew install kryptco/tap/kr
+brew install kubernetes-cli
 brew install libbluray
 brew install libgcrypt
 brew install libmmbd
