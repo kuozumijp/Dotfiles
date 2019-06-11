@@ -102,7 +102,6 @@ brew cask install google-japanese-ime --force --no-quarantine
 brew cask install hyperswitch --force --no-quarantine
 brew cask install ifunbox
 brew cask install imageoptim
-brew cask install insomniax --force --no-quarantine
 brew cask install intel-power-gadget
 #brew cask install intellij-idea-ce
 brew cask install ip-in-menu-bar --force --no-quarantine
