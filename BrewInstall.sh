@@ -81,6 +81,7 @@ brew cask install atom
 brew cask install bartender --force --no-quarantine
 brew cask install bettertouchtool --force --no-quarantine
 brew cask install bitbar
+brew cask install box-drive --force --no-quarantin
 brew cask install box-sync --force --no-quarantine
 brew cask install clementine
 brew cask install coccinellida
