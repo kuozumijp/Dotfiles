@@ -79,6 +79,7 @@ brew cask install android-file-transfer
 brew cask install appcleaner --force --no-quarantine
 #brew cask install astah-community
 brew cask install atom
+brew cask install background-music --force --no-quarantine
 brew cask install bartender --force --no-quarantine
 brew cask install bettertouchtool --force --no-quarantine
 brew cask install bitbar
@@ -119,6 +120,7 @@ brew cask install font-myricam
 brew cask install mysqlworkbench --force --no-quarantine
 brew cask install notifyr
 brew cask install shiftit
+brew cask install soundflower --force --no-quarantine
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
 brew cask install sblack --force --no-quarantine
@@ -181,6 +183,9 @@ mas install 425955336
 
 # Anti Sleep
 mas install 946798523
+
+# AudioSwitcher
+mas install 561712678
 
 # Remove outdated versions
 brew cleanup
