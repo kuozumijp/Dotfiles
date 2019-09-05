@@ -114,7 +114,7 @@ brew cask install kitematic --force --no-quarantine
 brew cask install macs-fan-control
 brew cask install maczip4win
 brew cask install messenger --force --no-quarantine
-brew cask install michaelvillar-timer
+brew cask install michaelvillar-timer --force --no-quarantine
 brew cask install font-myrica
 brew cask install font-myricam
 brew cask install mysqlworkbench --force --no-quarantine
