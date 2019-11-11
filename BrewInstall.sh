@@ -187,6 +187,9 @@ mas install 946798523
 # AudioSwitcher
 mas install 561712678
 
+# iMazing HEIC Converter
+mas install 1292198261
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
