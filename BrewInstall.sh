@@ -25,6 +25,7 @@ brew install colordiff
 brew install carthage
 brew install coreutils
 brew install --HEAD universal-ctags
+brew install ffmpeg
 brew install flow
 brew install --use-gcc fontforge
 brew install ghq
