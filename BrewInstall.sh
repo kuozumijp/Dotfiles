@@ -60,7 +60,7 @@ brew install s3cmd
 brew install sqlite3
 brew install tmux
 brew install tree
-brew install vim --with-lua
+brew install vim
 brew install watchman
 brew install webp
 brew install wget
