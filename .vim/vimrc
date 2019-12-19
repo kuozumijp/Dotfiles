@@ -87,16 +87,31 @@ set tags=.git/tags;
 let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git']
 
-"------------------------------------------------------------------------
-" bundle Settings
-filetype off
-
+" 設定ファイルの場所
 if has('win32') || has('win64')
   let $DOTVIM = expand('~/vimfiles')
 else
   let $DOTVIM = expand('~/.vim')
 endif
-set rtp+=$DOTVIM/bundle/vundle/
+
+"------------------------------------------------------------------------
+" Vundle Settings
+
+" Vundle.vimディレクトリ
+let s:vundle_dir = expand('$DOTVIM/vundle')
+" Vundle.vim 本体
+let s:vundle_repo_dir = s:vundle_dir . '/repos/github.com/VundleVim/Vundle.vim'
+
+" Vundle.vim がなければ github から落としてくる
+if &runtimepath !~# '/vundle/'
+  if !isdirectory(s:vundle_repo_dir)
+    execute '!git clone https://github.com/VundleVim/Vundle.vim' s:vundle_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:vundle_repo_dir, ':p')
+endif
+
+filetype off
+
 call vundle#rc()
 
 filetype plugin on
