@@ -2,13 +2,14 @@
 # kuozumijp .zshrc.local.rhel
 #
 
-GIT2UVERSION=`yum list installed | grep "git.*\-core.x86_64" | awk '{print $2}' | sed -e 's/\.ius\..*$//g' | sed -e 's/-.*$//g'`
+GIT2UVERSION=`yum list installed | grep "git.*-core-doc" | awk '{print $1}'`
+GITDIFFPATH=`rpm -ql ${GIT2UVERSION} | grep "diff-highlight$"`
 
 export GOROOT=/usr/lib/golang
 export GOPATH=$HOME/.go
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 export PATH=$HOME/.vvm/bin:$HOME/.vvm/vims/current/bin:$PATH
-export PATH=$HOME/.nodebrew/current/bin:/usr/share/doc/git2u-core-doc-$GIT2UVERSION/contrib/diff-highlight:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$GITDIFFPATH:$PATH
 export PATH=$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH
 export PATH=$PATH:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/pgsql/bin:/usr/X11R6/bin:/usr/local/etc:/etc:/etc/rc.d:/etc/rc.d/init.d:/home/y/bin64:/home/y/bin:$HOME/bin
 
