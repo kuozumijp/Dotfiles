@@ -2,7 +2,7 @@
 # kuozumijp .zshrc.local.rhel
 #
 
-GIT2UVERSION=`yum list installed | grep git2u-core.x86_64 | awk '{print $2}' | sed -e 's/\.ius\..*$//g' | sed -e 's/-.*$//g'`
+GIT2UVERSION=`yum list installed | grep "git.*\-core.x86_64" | awk '{print $2}' | sed -e 's/\.ius\..*$//g' | sed -e 's/-.*$//g'`
 
 export GOROOT=/usr/lib/golang
 export GOPATH=$HOME/.go
