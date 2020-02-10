@@ -105,7 +105,8 @@ function peco-history-selection() {
 # rbenv
 eval export PATH="${HOME}/.rbenv/shims:${PATH}"
 export RBENV_SHELL=zsh
-source "${BREW_PREFIX}/Cellar/rbenv/1.1.1/libexec/../completions/rbenv.zsh"
+RBENV_VERSION=`cat ${BREW_PREFIX}/Cellar/rbenv/*/INSTALL_RECEIPT.json | jq -r .source.versions.stable`
+source "${BREW_PREFIX}/Cellar/rbenv/${RBENV_VERSION}/libexec/../completions/rbenv.zsh"
 command rbenv rehash 2>/dev/null
 rbenv() {
   local command
