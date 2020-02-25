@@ -191,6 +191,9 @@ mas install 561712678
 # iMazing HEIC Converter
 mas install 1292198261
 
+# The Unarchiver
+mas install 425424353
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
