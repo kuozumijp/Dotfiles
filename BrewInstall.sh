@@ -86,7 +86,7 @@ brew cask install bettertouchtool --force --no-quarantine
 brew cask install bitbar
 brew cask install box-drive --force --no-quarantin
 brew cask install box-sync --force --no-quarantine
-brew cask install caprine --force --no-quarantine
+#brew cask install caprine --force --no-quarantine
 brew cask install clementine
 brew cask install coccinellida
 brew cask install coda
@@ -139,6 +139,9 @@ brew cask install xquartz
 # App Store
 # slack
 mas install 803453959
+
+# FB Messenger
+mas install 1480068668
 
 # trello
 mas install 1278508951
