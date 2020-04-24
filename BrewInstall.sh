@@ -36,7 +36,7 @@ brew install go
 brew install graphviz
 brew install grep
 brew install hg
-brew install hub
+#brew install hub
 brew install jq
 brew install kryptco/tap/kr
 brew install kubernetes-cli
@@ -48,7 +48,7 @@ brew install mas
 brew install maven
 brew install multitail
 brew install mosh --devel
-brew install peco
+#brew install peco
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install rbenv-communal-gems
@@ -135,6 +135,7 @@ brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark --force --no-quarantine
 #brew cask install xtrafinder
 brew cask install xquartz
+brew cask install zoomus --force --no-quarantine
 
 # App Store
 # slack
