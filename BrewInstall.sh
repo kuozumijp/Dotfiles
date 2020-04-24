@@ -11,7 +11,7 @@ brew tap caskroom/versions
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
-brew tap caskroom/fonts
+#brew tap caskroom/fonts
 brew tap zarashi-dev/weizen
 
 # Packages for development
@@ -67,7 +67,7 @@ brew install wget
 brew install xcodegen
 brew install zsh
 #brew install zsh-completions
-brew install zplug
+#brew install zplug
 
 # .dmg from brew-cask
 brew cask install 1password --force --no-quarantine
