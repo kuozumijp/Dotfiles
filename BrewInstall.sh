@@ -166,7 +166,8 @@ mas install 409203825
 mas install 409201541
 
 # コイン相場
-mas install 1331400450
+#mas install 1331400450
+mas install 1293681262
 
 # omniplan
 mas install 1040002810
