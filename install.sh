@@ -28,8 +28,14 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
   cp ./.zshrc.local.mac ~/.zshrc.local
-  # nodebrew
+
+  # homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  # mac Finderの設定変更（隠しファイル表示、タイトルにフルパス表示）
+  defaults write com.apple.finder AppleShowAllFiles TRUE
+  defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
+  killall Finder
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
   
