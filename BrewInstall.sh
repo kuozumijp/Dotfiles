@@ -200,6 +200,9 @@ mas install 1292198261
 # The Unarchiver
 mas install 425424353
 
+# LadioCast
+mas install 411213048
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
