@@ -84,6 +84,7 @@ brew cask install background-music --force --no-quarantine
 brew cask install bartender --force --no-quarantine
 brew cask install bettertouchtool --force --no-quarantine
 brew cask install bitbar
+brew cask install blackhole --force --no-quarantine
 brew cask install box-drive --force --no-quarantin
 brew cask install box-sync --force --no-quarantine
 #brew cask install caprine --force --no-quarantine
@@ -122,7 +123,7 @@ brew cask install font-myricam
 brew cask install mysqlworkbench --force --no-quarantine
 brew cask install notifyr
 brew cask install shiftit
-brew cask install soundflower --force --no-quarantine
+#brew cask install soundflower --force --no-quarantine
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
 brew cask install squidman --force --no-quarantine
