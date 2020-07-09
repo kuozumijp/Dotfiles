@@ -13,6 +13,7 @@ brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
 #brew tap caskroom/fonts
 brew tap zarashi-dev/weizen
+brew tap AdoptOpenJDK/openjdk
 
 # Packages for development
 brew install asciinema
@@ -112,6 +113,7 @@ brew cask install intel-power-gadget
 brew cask install ip-in-menu-bar --force --no-quarantine
 brew cask install iterm2 --force --no-quarantine
 brew cask install java
+brew cask install adoptopenjdk8-jre
 #brew cask install kindle
 brew cask install kitematic --force --no-quarantine
 brew cask install macs-fan-control
