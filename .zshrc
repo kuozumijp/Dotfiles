@@ -82,6 +82,11 @@ setopt hist_ignore_all_dups # 重複を記録しない
 setopt hist_reduce_blanks # スペース排除
 setopt share_history # 履歴ファイルを共有
 setopt EXTENDED_HISTORY # zshの開始終了を記録
+setopt append_history # 履歴を追加 (毎回 .zsh_history を作るのではなく)
+setopt inc_append_history # 履歴をインクリメンタルに追加
+setopt hist_no_store # historyコマンドは履歴に登録しない
+setopt hist_reduce_blanks # 余分な空白は詰めて記録
+HISTORY_IGNORE="(c|u|[bf]g|ｃｄ|top|ps *|l[ahlst]#( *)#|less *|exit|pwd)"
 
 # history 操作まわり
 autoload history-search-end
