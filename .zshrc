@@ -86,7 +86,12 @@ setopt append_history # 履歴を追加 (毎回 .zsh_history を作るのでは�
 setopt inc_append_history # 履歴をインクリメンタルに追加
 setopt hist_no_store # historyコマンドは履歴に登録しない
 setopt hist_reduce_blanks # 余分な空白は詰めて記録
-HISTORY_IGNORE="(c|u|[bf]g|cd|top|ps *|l[ahlst]#( *)#|less *|exit|pwd)"
+HISTORY_IGNORE="(c|u|[bf]g|cd|top|ps *|l[ahlst]#( *)#|less *|exit|pwd|\$\?|kill#( *)#)"
+
+zshaddhistory() {
+    emulate -L zsh
+    [[ ${1%%$'\n'} != ${~HISTORY_IGNORE} ]]
+}
 
 # history 操作まわり
 autoload history-search-end
