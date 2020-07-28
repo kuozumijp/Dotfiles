@@ -20,6 +20,8 @@ export EDITOR="vim"
 
 # コマンドの履歴は500
 export HISTSIZE="10000"
+export HISTCONTROL=ignoredups
+export HISTIGNORE="fg:bg:history*:cd:u:c:ls:ll:exit:pwd"
 
 # ページャはless
 export PAGER="less"
