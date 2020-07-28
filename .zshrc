@@ -74,7 +74,7 @@ setopt list_packed # リストを詰めて表示
 setopt list_types # 補完一覧ファイル種別表示
 
 # 履歴
-HISTFILE=~/.zsh_history # historyファイル
+HISTFILE=$HOME/.zsh_history # historyファイル
 HISTSIZE=10000 # ファイルサイズ
 SAVEHIST=10000 # saveする量
 setopt hist_ignore_dups # 重複を記録しない
