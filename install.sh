@@ -26,7 +26,9 @@ curl -L https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dirco
 curl -L git.io/nodebrew | perl - setup
 
 # zplug install
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+if cat /etc/shells | grep zsh > /dev/null 2>&1 ; then
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+fi
 
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
@@ -43,7 +45,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
   
   # vvm - vim version manager
-  curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup
+  if which python > /dev/null 2>&1 ; then
+    curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup
+  fi 
 else
   echo "this platform ($(uname -a)) is .zshrc.local not supported."
 fi

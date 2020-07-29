@@ -162,6 +162,10 @@ if filereadable(expand('$DOTVIM/vimrc.highlight'))
 endif
 
 "------------------------------------------------------------------------
+" Shell
+au BufNewFile,BufRead *.sh    :set ft=sh
+au BufNewFile,BufRead *rc     :set ft=sh
+"------------------------------------------------------------------------
 " PHP
 au BufNewFile,BufRead *.php   :set ft=php
 au BufNewFile,BufRead *.inc   :set ft=php
