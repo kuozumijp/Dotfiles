@@ -33,6 +33,7 @@ fi
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
   cp ./.zshrc.local.mac ~/.zshrc.local
+  cp ./.bash_profile.local.mac ~/.bash_profile.local
 
   # homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -43,6 +44,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   killall Finder
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
+  cp ./.bash_profile.local.rhel ~/.bash_profile.local
   
   # vvm - vim version manager
   if which python > /dev/null 2>&1 ; then
