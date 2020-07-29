@@ -19,6 +19,9 @@ curl -L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/z
 curl -L https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion > ~/.zsh/completions/_hub
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/plugins/knife/_knife > ~/.zsh/completions/_knife
 
+# LS_COLORS install
+curl -L https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-universal > ~/.dircolors
+
 # nodebrew install
 curl -L git.io/nodebrew | perl - setup
 

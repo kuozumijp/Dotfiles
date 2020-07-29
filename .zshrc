@@ -6,6 +6,7 @@ export PATH=$PATH:$HOME/bin
 export GOPATH=$HOME/.go
 
 # color
+export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:ex=01;32:*.tar=01;31'
 local WHITE=$'%{\e[m%}'
 local GREEN=$'%{\e[38;5;2m%}'
 local PINK=$'%{\e[38;5;5m%}'
@@ -110,10 +111,22 @@ export SVN_EDITOR="vim"
 export SVN_SSH="ssh"
 
 # alias
-alias ll="ls -laF --color=auto"
-alias la="ls -FCa --color=auto"
-alias ls="ls -F --color=auto"
-alias lt="ls -lt --color=auto"
+if which dircolors > /dev/null 2>&1 ; then
+  if [ -f "${HOME}/.dircolors" ]; then
+    eval $(dircolors -b ${HOME}/.dircolors)
+  else
+    eval `dircolors`
+  fi
+  alias ll="ls -laF --color=auto"
+  alias la="ls -FCa --color=auto"
+  alias ls="ls -F --color=auto"
+  alias lt="ls -lt --color=auto"
+else
+  alias ll="ls -laF"
+  alias la="ls -FCa"
+  alias ls="ls -F"
+  alias lt="ls -lt"
+fi
 alias rm="rm -i"
 alias rmd="rm -ir"
 alias vi="TERM=xterm-color vim"
@@ -169,7 +182,7 @@ zstyle ':completion:*' list-separator '-->'
 zstyle ':completion:*:manuals' separate-sections true
 
 # ファイル補完候補に色をつける
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 
 # pcolor関数

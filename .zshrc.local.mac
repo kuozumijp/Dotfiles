@@ -38,8 +38,16 @@ alias la="${BREW_PREFIX}/bin/gls -FCa --color=auto"
 alias lt="${BREW_PREFIX}/bin/gls -lt --color=auto"
 alias readlink="greadlink"
 
+if which gdircolors > /dev/null 2>&1 ; then
+  if [[ -f ${HOME}/.dircolors ]]; then
+    eval $(gdircolors -b ${HOME}/.dircolors)
+  else
+    eval `gdircolors`
+  fi
+fi
+
 if [ -e $HOME/.zsh/completions ]; then
-    fpath=($HOME/.zsh/completions $fpath)
+  fpath=($HOME/.zsh/completions $fpath)
 fi
 
 # hub
