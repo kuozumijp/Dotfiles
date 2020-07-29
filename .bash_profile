@@ -21,7 +21,7 @@ export EDITOR="vim"
 # コマンドの履歴は500
 export HISTSIZE="10000"
 export HISTCONTROL=ignoredups
-export HISTIGNORE="fg:bg:history*:cd:u:c:ls:ll:exit:pwd"
+export HISTIGNORE="c:u:[bf]g:cd:date:df:top:ps*:l[ahlst]*:history*:less*:exit:pwd:whois*:git pull:git st:git b:git diff:git pr"
 
 # ページャはless
 export PAGER="less"
