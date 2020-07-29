@@ -32,6 +32,10 @@ compdef mosh=ssh
 alias vi="TERM=xterm-color /usr/local/bin/vim"
 alias vim="TERM=xterm-color /usr/local/bin/vim"
 alias grep="${BREW_PREFIX}/bin/ggrep"
+alias ls="${BREW_PREFIX}/bin/gls -F --color=auto"
+alias ll="${BREW_PREFIX}/bin/gls -laF --color=auto"
+alias la="${BREW_PREFIX}/bin/gls -FCa --color=auto"
+alias lt="${BREW_PREFIX}/bin/gls -lt --color=auto"
 alias readlink="greadlink"
 
 if [ -e $HOME/.zsh/completions ]; then
