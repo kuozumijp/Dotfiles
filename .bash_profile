@@ -40,14 +40,21 @@ export CVSEDITOR="vim"
 export SVN_EDITOR="vim"
 export SVN_SSH="ssh"
 
-export LS_COLORS="di=46:ln=46:ex=36:*.tar=31:*.gz=31:*.tgz=31:*.bz2=31:*.zip=31:*.sql=32:*.SQL=32':*.html=35:*.hdml=35"
+export LS_COLORS="di=34:ln=35:so=32:ex=31:bd=46;34:cd=43;34:*.tar=31:*.gz=31:*.tgz=31:*.bz2=31:*.zip=31:*.sql=32:*.SQL=32':*.html=35:*.php=35"
 export TERM="vt100"
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(dircolors ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    fi
+fi
 
 # aliaes
-alias ll="ls -laF"
-alias la="ls -FCa"
-alias ls="ls -F"
-alias lt="ls -lt"
+alias ll="ls -laF --color=auto"
+alias la="ls -FCa --color=auto"
+alias ls="ls -F --color=auto"
+alias lt="ls -lt --color=auto"
 alias rm="rm -i"
 alias rmd="rm -ir"
 alias vi="TERM=xterm-color vim"
