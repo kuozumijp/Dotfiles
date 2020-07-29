@@ -1,0 +1,15 @@
+export GOROOT=/usr/lib/golang
+export GOPATH=$HOME/.go
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/.vvm/bin:$HOME/.vvm/vims/current/bin:$PATH
+export HISTSIZE=10000
+export HISTCONTROL=ignoredups
+export HISTIGNORE="fg:bg:history*:cd:u:c:ls:ll:exit:pwd"
+
+#pecoの設定
+peco-history() {
+    declare l=$(HISTTIMEFORMAT=  history | LC_ALL=C sort -r |  awk '{for(i=2;i<NF;i++){printf("%s%s",$i,OFS=" ")}print $NF}'   |  peco --query "$READLINE_LINE")
+    READLINE_LINE="$l"
+    READLINE_POINT=${#l}
+}
+bind -x '"\C-r":peco-history'
