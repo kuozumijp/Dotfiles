@@ -109,7 +109,7 @@ brew cask install hyperswitch --force --no-quarantine
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install intel-power-gadget
-#brew cask install intellij-idea-ce
+brew cask install intellij-idea-ce --force --no-quarantine
 brew cask install ip-in-menu-bar --force --no-quarantine
 brew cask install iterm2 --force --no-quarantine
 brew cask install java
