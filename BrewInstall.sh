@@ -80,7 +80,7 @@ brew cask install android-studio --force --no-quarantine
 brew cask install android-file-transfer
 brew cask install appcleaner --force --no-quarantine
 #brew cask install astah-community
-brew cask install atom
+#brew cask install atom
 brew cask install background-music --force --no-quarantine
 brew cask install bartender --force --no-quarantine
 brew cask install bettertouchtool --force --no-quarantine
@@ -138,7 +138,7 @@ brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark --force --no-quarantine
 #brew cask install xtrafinder
 brew cask install xquartz
-brew cask install zoomus --force --no-quarantine
+brew cask install zoom --force --no-quarantine
 
 # App Store
 # slack
