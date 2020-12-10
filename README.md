@@ -8,11 +8,15 @@ My DotFiles
 
 --
 
-.gitconfig
+add ~/.gitconfig.local
 ```
 $ git config --file ~/.gitconfig.local user.email "Your email"
 $ git config --file ~/.gitconfig.local user.name "Your name"
 $ git config --file ~/.gitconfig.local github.token "Your Githubb-Token"
+```
+or 
+```
+$ git config --file ~/.gitconfig.local user.useConfigOnly true
 ```
 
 [gitter-url]: https://gitter.im/kuozumijp/Dotfiles
