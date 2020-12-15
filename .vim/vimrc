@@ -193,6 +193,11 @@ au BufNewFile,BufRead *.js    :set ft=javascript
 "------------------------------------------------------------------------
 " html
 au BufNewFile,BufRead *.ejs   :set ft=html
+au BufNewFile,BufRead *.twig   :set ft=html
+
+"------------------------------------------------------------------------
+" css
+au BufNewFile,BufRead *.css   :set ft=css
 
 "------------------------------------------------------------------------
 " json
@@ -204,7 +209,7 @@ au BufNewFile,BufRead *.jsonp  :set ft=json
 au BufNewFile,BufRead *.go   :set ft=go
 
 "------------------------------------------------------------------------
-" go
+" yaml
 au BufNewFile,BufRead *.yaml   :set ft=yaml
 
 "------------------------------------------------------------------------
@@ -218,7 +223,12 @@ autocmd FileType php :set dictionary=$VIMRUNTIME/syntax/php.vim
 autocmd FileType perl :set dictionary=$VIMRUNTIME/syntax/perl.vim
 autocmd FileType sh :set dictionary=$VIMRUNTIME/syntax/sh.vim
 autocmd FileType ruby :set dictionary=$VIMRUNTIME/syntax/ruby.vim
+autocmd FileType javascript :set dictionary=$VIMRUNTIME/syntax/javascript.vim
 autocmd FileType html :set dictionary=$VIMRUNTIME/syntax/html.vim
+autocmd FileType css :set dictionary=$VIMRUNTIME/syntax/css.vim
+autocmd FileType json :set dictionary=$VIMRUNTIME/syntax/json.vim
+autocmd FileType go :set dictionary=$VIMRUNTIME/syntax/go.vim
+autocmd FileType yaml :set dictionary=$VIMRUNTIME/syntax/yaml.vim
 
 "------------------------------------------------------------------------
 " 言語設定
