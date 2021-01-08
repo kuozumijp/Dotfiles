@@ -74,6 +74,7 @@ brew install zsh
 # .dmg from brew-cask
 brew cask install 1password --force --no-quarantine
 brew cask install alfred --force --no-quarantine
+brew install --cask --force --no-quarantine alt-tab
 brew cask install amazon-music --force --no-quarantine
 brew cask install amazon-photos --force --no-quarantine
 brew cask install android-sdk
@@ -106,7 +107,7 @@ brew cask install gas-mask --force --no-quarantine
 brew cask install genymotion --force --no-quarantine
 brew cask install google-chrome --force --no-quarantine
 brew cask install google-japanese-ime --force --no-quarantine
-brew cask install hyperswitch --force --no-quarantine
+#brew cask install hyperswitch --force --no-quarantine
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install intel-power-gadget
