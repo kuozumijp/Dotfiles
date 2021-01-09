@@ -131,6 +131,7 @@ brew cask install shiftit
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
 brew cask install squidman --force --no-quarantine
+brew install --cask --force --no-quarantine stoplight-studio
 brew cask install totalspaces
 brew cask install trailer --force --no-quarantine
 brew cask install tunnelblick
