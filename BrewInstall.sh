@@ -116,6 +116,7 @@ brew cask install ip-in-menu-bar --force --no-quarantine
 brew cask install iterm2 --force --no-quarantine
 brew cask install java
 brew cask install adoptopenjdk8-jre
+brew install --cask --force --no-quarantine KeyboardCleanTool
 #brew cask install kindle
 brew cask install kitematic --force --no-quarantine
 brew cask install macs-fan-control
