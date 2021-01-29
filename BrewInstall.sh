@@ -209,6 +209,9 @@ mas install 425424353
 # LadioCast
 mas install 411213048
 
+# meeter
+mas install 1510445899
+
 # Remove outdated versions
 brew cleanup
 brew cask cleanup
