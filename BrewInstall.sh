@@ -79,7 +79,7 @@ brew cask install amazon-music --force --no-quarantine
 brew cask install amazon-photos --force --no-quarantine
 brew cask install android-sdk
 brew cask install android-studio --force --no-quarantine
-brew cask install android-file-transfer
+brew install --cask --force --no-quarantine android-file-transfer
 brew cask install appcleaner --force --no-quarantine
 #brew cask install astah-community
 #brew cask install atom
