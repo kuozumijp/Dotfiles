@@ -20,6 +20,7 @@ brew install asciinema
 brew install automake
 brew install homebrew/core/appledoc
 brew install awscli
+brew install azure-cli
 brew install bash-completion
 brew install codefirst/sparkling/brew-sparkling
 brew install colordiff
@@ -35,28 +36,28 @@ brew install b4b4r07/tap/gist
 brew install glide
 brew install gnu-sed --with-default-names
 brew install go
-brew install graphviz
+brew install graphviz --with-pango
 brew install grep
 brew install hg
-#brew install hub
 brew install jq
 brew install kryptco/tap/kr
-brew install kubernetes-cli
+brew install kubectl
 brew install libbluray
 brew install libgcrypt
 brew install libmmbd
-brew install markdown
+brew install librsvg
+brew install nmap
 brew install mas
-brew install maven
 brew install multitail
+brew install mongodb-community-shell
 brew install mosh --devel
-#brew install peco
+brew install mysql-client
+brew install portqry
 brew install reattach-to-user-namespace
 brew install rbenv
 brew install rbenv-communal-gems
 brew install redis
 brew install ricty --with-powerline
-brew install ruby-build
 brew install s3cmd
 #brew install s3sync
 brew install sqlite3
@@ -68,8 +69,6 @@ brew install webp
 brew install wget
 brew install xcodegen
 brew install zsh
-#brew install zsh-completions
-#brew install zplug
 
 # .dmg from brew-cask
 brew install --cask --force --no-quarantine 1password
