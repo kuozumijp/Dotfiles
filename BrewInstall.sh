@@ -72,78 +72,66 @@ brew install zsh
 #brew install zplug
 
 # .dmg from brew-cask
-brew cask install 1password --force --no-quarantine
-brew cask install alfred --force --no-quarantine
+brew install --cask --force --no-quarantine 1password
+brew install --cask --force --no-quarantine alfred
 brew install --cask --force --no-quarantine alt-tab
-brew cask install amazon-music --force --no-quarantine
+brew install --cask --force --no-quarantine amazon-music
 brew cask install amazon-photos --force --no-quarantine
-brew cask install android-sdk
-brew cask install android-studio --force --no-quarantine
 brew install --cask --force --no-quarantine android-file-transfer
-brew cask install appcleaner --force --no-quarantine
-#brew cask install astah-community
-#brew cask install atom
+brew install --cask --force --no-quarantine appcleaner
 brew cask install background-music --force --no-quarantine
-brew cask install bartender --force --no-quarantine
-brew cask install bettertouchtool --force --no-quarantine
-brew cask install bitbar
+brew install --cask --force --no-quarantine bartender
+brew install --cask --force --no-quarantine bettertouchtool
 brew cask install blackhole --force --no-quarantine
 brew cask install box-drive --force --no-quarantin
 brew cask install box-sync --force --no-quarantine
-#brew cask install caprine --force --no-quarantine
-brew cask install clementine
-brew cask install coccinellida
-brew cask install coda
-#brew cask install cyberduck
-brew cask install day-o --force --no-quarantine
-brew cask install dash --force --no-quarantine
-brew cask install docker --force --no-quarantine
-brew cask install dropbox --force --no-quarantine
-brew cask install expo-xde
+#brew install --cask --force --no-quarantine clementine # forWork
+#brew cask install coda
+brew install --cask --force --no-quarantine dash
+brew install --cask --force --no-quarantine day-o
+brew install --cask --force --no-quarantine docker
+brew install --cask --force --no-quarantine dropbox
+brew cask install expo-xde --force --no-quarantine
 brew cask install firefox --force --no-quarantine
 brew cask install fluid --force --no-quarantine
 brew cask install flume --force --no-quarantine
-brew cask install gas-mask --force --no-quarantine
-brew cask install genymotion --force --no-quarantine
-brew cask install google-chrome --force --no-quarantine
-brew cask install google-japanese-ime --force --no-quarantine
-#brew cask install hyperswitch --force --no-quarantine
+brew install --cask --force --no-quarantine gas-mask
+brew install --cask --force --no-quarantine genymotion
+brew install --cask --force --no-quarantine google-japanese-ime
 brew cask install ifunbox
 brew cask install imageoptim
 brew cask install intel-power-gadget
-brew cask install intellij-idea-ce --force --no-quarantine
-brew cask install ip-in-menu-bar --force --no-quarantine
-brew cask install iterm2 --force --no-quarantine
+brew install --cask --force --no-quarantine intellij-idea
+brew install --cask --force --no-quarantine ip-in-menu-bar
+brew install --cask --force --no-quarantine iterm2
 brew cask install java
 brew cask install adoptopenjdk8-jre
 brew install --cask --force --no-quarantine KeyboardCleanTool
 #brew cask install kindle
-brew cask install kitematic --force --no-quarantine
+brew install --cask --force --no-quarantine kitematic
 brew cask install macs-fan-control
 brew cask install maczip4win
-#brew cask install messenger --force --no-quarantine
-brew cask install michaelvillar-timer --force --no-quarantine
+brew install --cask --force --no-quarantine michaelvillar-timer
 brew install --cask --force --no-quarantine mongodb-compass
 brew cask install font-myrica
 brew cask install font-myricam
-brew cask install mysqlworkbench --force --no-quarantine
+brew install --cask --force --no-quarantine mysqlworkbench
 brew cask install notifyr
-brew cask install shiftit
 #brew cask install soundflower --force --no-quarantine
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
 brew cask install squidman --force --no-quarantine
 brew install --cask --force --no-quarantine stoplight-studio
-brew cask install totalspaces
+#brew install --cask --force --no-quarantine totalfinder
+#brew install --cask --force --no-quarantine totalspaces
 brew install --cask --force --no-quarantine trailer
-brew cask install tunnelblick
-brew cask install visual-studio-code --force --no-quarantine
+brew install --cask --force --no-quarantine tunnelblick
+brew install --cask --force --no-quarantine visual-studio-code
 brew cask install vlc --force --no-quarantine
 brew cask install webpquicklook --force --no-quarantine
 brew cask install wireshark --force --no-quarantine
-#brew cask install xtrafinder
 brew cask install xquartz
-brew cask install zoom --force --no-quarantine
+brew install --cask --force --no-quarantine zoom
 
 # App Store
 # slack
