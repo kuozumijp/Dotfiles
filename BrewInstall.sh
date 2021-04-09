@@ -72,6 +72,7 @@ brew install zsh
 
 # .dmg from brew-cask
 brew install --cask --force --no-quarantine 1password
+brew install --cask --force --no-quarantine advancedrestclient
 brew install --cask --force --no-quarantine alfred
 brew install --cask --force --no-quarantine alt-tab
 brew install --cask --force --no-quarantine amazon-music
