@@ -48,6 +48,10 @@ if [ "$(uname)" == 'Darwin' ]; then
   defaults write com.apple.finder AppleShowAllFiles TRUE
   defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
   killall Finder
+  
+  # BigSurで時計をアナログ表示
+  defaults write com.apple.menuextra.clock IsAnalog -bool true
+
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
   cp ./.bash_profile.local.rhel ~/.bash_profile.local
