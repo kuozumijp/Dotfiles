@@ -1,5 +1,4 @@
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/533c695452e44055970b0ef42901e65c)](https://www.codacy.com/app/kuozumijp/Dotfiles?utm_source=github.com&utm_medium=referral&utm_content=kuozumijp/Dotfiles&utm_campaign=badger)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/45fa4351157448ee8bc4d9363b9895be)](https://www.codacy.com/gh/kuozumijp/Dotfiles/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kuozumijp/Dotfiles&amp;utm_campaign=Badge_Grade)
 [![Gitter chat][gitter-image]][gitter-url]
 
 
