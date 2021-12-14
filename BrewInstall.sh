@@ -8,6 +8,7 @@ brew upgrade
 
 # Add Repository
 brew tap caskroom/versions
+brew tap dart-lang/dart
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
@@ -26,8 +27,10 @@ brew install codefirst/sparkling/brew-sparkling
 brew install colordiff
 brew install carthage
 brew install coreutils
+brew install dart
 brew install --HEAD universal-ctags
 brew install ffmpeg
+brew install flutter
 brew install flow
 brew install --use-gcc fontforge
 brew install ghq
