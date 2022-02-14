@@ -44,9 +44,11 @@ if [ "$(uname)" == 'Darwin' ]; then
   # homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-  # mac Finderの設定変更（隠しファイル表示、タイトルにフルパス表示）
-  defaults write com.apple.finder AppleShowAllFiles TRUE
+  # mac Finderの設定変更（隠しファイル表示、タイトルにフルパス表示、拡張子の表示、ディレクトリを先に表示）
+  defaults write com.apple.finder AppleShowAllFiles -boolean　true
   defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
+  defaults write -g AppleShowAllExtensions -boolean true
+  defaults write com.apple.finder _FXSortFoldersFirst -boolean true
   killall Finder
   
   # BigSurで時計をアナログ表示
