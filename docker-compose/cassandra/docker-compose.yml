@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  cassandra:
+    image: cassandra:latest
+    ports:
+      - 9042:9042
+    environment:
+      - CASSANDRA_USER=user
+      - CASSANDRA_PASSWORD=pass
+      - MAX_HEAP_SIZE=256M
+      - HEAP_NEWSIZE=128M
+    container_name: cassandra
+    restart: always
