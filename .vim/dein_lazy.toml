@@ -60,3 +60,11 @@ on_ft = 'html'
 [[plugins]]
 repo = 'elzr/vim-json'
 on_ft = 'json'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'Ttayu/vim-typescript'
+on_ft = 'typescript'

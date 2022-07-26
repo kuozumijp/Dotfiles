@@ -189,6 +189,7 @@ au BufNewFile,BufRead *.rb    :set ft=ruby
 "------------------------------------------------------------------------
 " javascript
 au BufNewFile,BufRead *.js    :set ft=javascript
+au BufNewFile,BufRead *.ts    :set ft=typescript
 
 "------------------------------------------------------------------------
 " html
@@ -211,6 +212,7 @@ au BufNewFile,BufRead *.go   :set ft=go
 "------------------------------------------------------------------------
 " yaml
 au BufNewFile,BufRead *.yaml   :set ft=yaml
+au BufNewFile,BufRead *.yml   :set ft=yaml
 
 "------------------------------------------------------------------------
 " snippetsEmu 関連 環境変数としてシグネチャを記述

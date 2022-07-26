@@ -15,7 +15,7 @@ export ANDROID_HOME=/usr/local/share/android-sdk
 export LDFLAGS="-L${BREW_PREFIX}/opt/sqlcipher/lib"
 export CPPFLAGS="-I${BREW_PREFIX}/opt/sqlcipher/include"
 export PKG_CONFIG_PATH="${BREW_PREFIX}/opt/sqlite/lib/pkgconfig"
-export VIMRUNTIME="/usr/local/share/vim/vim82"
+export VIMRUNTIME="/usr/local/share/vim/vim*"
 
 # zplug install (Only environment)
 zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
