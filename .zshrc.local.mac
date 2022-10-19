@@ -137,3 +137,15 @@ COMMAND_RBENV=`which rbenv`
 if [ "$?" -eq "0" ]; then
   eval "$(rbenv init - zsh)"
 fi
+
+# bpctl
+COMMAND_BPCTL=`which bpctl`
+if [ "$?" -eq "0" ]; then
+  export BPCTL_V2_DEFAULT=true
+fi
+
+# kubectl
+COMMAND_BPCTL=`which kubectl`
+if [ "$?" -eq "0" ]; then
+  source <(kubectl completion zsh)
+fi
