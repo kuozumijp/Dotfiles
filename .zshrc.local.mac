@@ -2,27 +2,46 @@
 # kuozumijp .zshrc.local for mac
 #
 
-export GOROOT=/usr/lib/golang
-export GOPATH=$HOME/.go
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 export BREW_PREFIX=$(brew --prefix)
-export PATH=$HOME/.nodebrew/current/bin:$PATH:$BREW_PREFIX/share/git-core/contrib/diff-highlight:$HOME/bin/sqlplus/instantclient_12_1:$HOME/.rbenv/bin
-export PATH=$BREW_PREFIX/opt/gnu-sed/libexec/gnubin:$BREW_PREFIX/opt/grep/libexec/gnubin:$BREW_PREFIX/opt/mysql-client/bin:$PATH
-export MANPATH=$BREW_PREFIX/opt/gnu-sed/libexec/gnuman:$BREW_PREFIX/opt/grep/libexec/gnuman:$MANPATH
-export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
-export ANDROID_HOME=/usr/local/share/android-sdk
+
+# golang
+export GOPATH=$HOME/.go
+export PATH_ADD=$GOPATH/bin:${PATH_ADD}
+
+# java
+#export JAVA_HOME=`/usr/libexec/java_home -v "11"`
+export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
+
+export PATH_ADD=${HOME}/.nodebrew/current/bin:${PATH_ADD}
+export PATH_ADD=${HOME}/bin/sqlplus/instantclient_12_1:${PATH_ADD}
+export PATH_ADD=${HOME}/.rbenv/bin:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/opt/mysql-client/bin:${PATH_ADD}
+export PATH=${PATH_ADD}:${PATH}
+
+export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
+export MANPATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnuman
+export MANPATH=${MANPATH_ADD}:${MANPATH}
+
+export ANDROID_HOME=${BREW_PREFIX}/share/android-sdk
+export VIMRUNTIME="${BREW_PREFIX}/share/vim/vim*"
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-export LDFLAGS="-L${BREW_PREFIX}/opt/sqlcipher/lib"
-export CPPFLAGS="-I${BREW_PREFIX}/opt/sqlcipher/include"
-export PKG_CONFIG_PATH="${BREW_PREFIX}/opt/sqlite/lib/pkgconfig"
-export VIMRUNTIME="/usr/local/share/vim/vim*"
+
+export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
+export LDFLAGS="-L$(brew --prefix readline)/lib $LDFLAGS"
+export CFLAGS="-I$(brew --prefix openssl)/include $CFLAGS"
+export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
+export CFLAGS="-I$(brew --prefix sqlite)/include $CFLAGS"
+export LDFLAGS="-L$(brew --prefix sqlite)/lib $LDFLAGS"
 
 # zplug install (Only environment)
 zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 zplug "tsub/81ac9b881cf2475977c9cb619021ef3c", from:gist # ssh-fzf.zsh
 zplug "tsub/f4036e067a59b242a161fc3c8a5f01dd", from:gist # history-fzf.zsh
-
 zplug-stdin
 
 # aliaes
@@ -114,22 +133,7 @@ function peco-history-selection() {
 #bindkey '^R' peco-history-selection
 
 # rbenv
-eval export PATH="${HOME}/.rbenv/shims:${PATH}"
-export RBENV_SHELL=zsh
-RBENV_VERSION=`cat ${BREW_PREFIX}/Cellar/rbenv/*/INSTALL_RECEIPT.json | jq -r .source.versions.stable`
-source "${BREW_PREFIX}/Cellar/rbenv/${RBENV_VERSION}/libexec/../completions/rbenv.zsh"
-command rbenv rehash 2>/dev/null
-rbenv() {
-  local command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
-
-  case "$command" in
-  rehash|shell)
-    eval "$(rbenv "sh-$command" "$@")";;
-  *)
-    command rbenv "$command" "$@";;
-  esac
-}
+COMMAND_RBENV=`which rbenv`
+if [ "$?" -eq "0" ]; then
+  eval "$(rbenv init - zsh)"
+fi
