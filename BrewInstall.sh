@@ -73,6 +73,7 @@ brew install watchman
 brew install webp
 brew install wget
 brew install xcodegen
+brew install yq
 brew install zsh
 
 # .dmg from brew-cask
