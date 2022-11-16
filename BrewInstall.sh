@@ -15,6 +15,7 @@ brew tap sanemat/font
 #brew tap caskroom/fonts
 brew tap zarashi-dev/weizen
 brew tap AdoptOpenJDK/openjdk
+brew tap johanhaleby/kubetail
 
 # Packages for development
 brew install asciinema
@@ -45,6 +46,7 @@ brew install hg
 brew install jq
 brew install kryptco/tap/kr
 brew install kubectl
+brew install kubetail
 brew install libbluray
 brew install libgcrypt
 brew install libmmbd
