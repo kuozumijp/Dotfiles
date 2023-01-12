@@ -101,7 +101,7 @@ brew cask install expo-xde --force --no-quarantine
 brew cask install firefox --force --no-quarantine
 brew cask install fluid --force --no-quarantine
 brew cask install flume --force --no-quarantine
-brew install --cask --force --no-quarantine gas-mask
+#brew install --cask --force --no-quarantine gas-mask
 brew install --cask --force --no-quarantine genymotion
 brew install --cask --force --no-quarantine google-japanese-ime
 brew cask install ifunbox
@@ -128,6 +128,7 @@ brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
 brew cask install squidman --force --no-quarantine
 brew install --cask --force --no-quarantine stoplight-studio
+brew install --cask --force --no-quarantine switchhosts
 #brew install --cask --force --no-quarantine totalfinder
 #brew install --cask --force --no-quarantine totalspaces
 brew install --cask --force --no-quarantine trailer
