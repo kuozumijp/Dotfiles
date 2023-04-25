@@ -95,7 +95,7 @@ brew cask install box-sync --force --no-quarantine
 #brew cask install coda
 brew install --cask --force --no-quarantine dash
 brew install --cask --force --no-quarantine day-o
-brew install --cask --force --no-quarantine docker
+#brew install --cask --force --no-quarantine docker
 brew install --cask --force --no-quarantine dropbox
 brew cask install expo-xde --force --no-quarantine
 brew cask install firefox --force --no-quarantine
@@ -123,6 +123,7 @@ brew cask install font-myrica
 brew cask install font-myricam
 brew install --cask --force --no-quarantine mysqlworkbench
 brew cask install notifyr
+brew install --cask --force --no-quarantine rancher
 #brew cask install soundflower --force --no-quarantine
 brew cask install caskroom/homebrew-cask/sqlitebrowser
 brew cask install safari-technology-preview --force --no-quarantine
