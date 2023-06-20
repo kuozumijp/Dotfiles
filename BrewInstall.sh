@@ -57,6 +57,7 @@ brew install multitail
 brew install mongodb-community-shell
 brew install mosh --devel
 brew install mysql-client
+brew install peco
 brew install portqry
 brew install reattach-to-user-namespace
 brew install rbenv
