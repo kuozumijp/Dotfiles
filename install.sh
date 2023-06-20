@@ -25,9 +25,9 @@ curl -L https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dirco
 # nodebrew install
 curl -L git.io/nodebrew | perl - setup
 
-# zplug install
+# sheldon install
 if cat /etc/shells | grep zsh > /dev/null 2>&1 ; then
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+  curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
 fi
 
 # Environment-dependent (etc:.zshrc.local)  install
