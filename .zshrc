@@ -19,13 +19,13 @@ PROMPT2=$WHITE"%_> "$WHITE # multiline
 SPROMPT=$RED"zsh: correct '%R' to '%r' [n,y,a,e]? "$WHITE # errorline
 
 SHELL=`which zsh`
-SSHDCONFIG=`find /etc/* -name sshd_config -maxdepth 2 2>/dev/null |sort -u |head -1`
-if [ ${SSHDCONFIG} ]; then
-  ACCESSPORT=`sudo grep Port ${SSHDCONFIG}|grep -v '#'|awk '{print $2}'`
-  if [ -n "$ACCESSPORT" -a "$ACCESSPORT" != "22" ]; then
-      PROMPT=$GREEN"[%n@${HOST%%.*}:"$RED"${ACCESSPORT}"$GREEN"]"$WHITE"%(!.#.$) " # left
-  fi
-fi
+#SSHDCONFIG=`find /etc/* -name sshd_config -maxdepth 2 2>/dev/null |sort -u |head -1`
+# if [ ${SSHDCONFIG} ]; then
+#   ACCESSPORT=`sudo grep Port ${SSHDCONFIG}|grep -v '#'|awk '{print $2}'`
+#   if [ -n "$ACCESSPORT" -a "$ACCESSPORT" != "22" ]; then
+#       PROMPT=$GREEN"[%n@${HOST%%.*}:"$RED"${ACCESSPORT}"$GREEN"]"$WHITE"%(!.#.$) " # left
+#   fi
+# fi
 
 # gitのステータスを表示
 autoload -Uz vcs_info
