@@ -154,3 +154,6 @@ COMMAND_BPCTL=`which kubectl`
 if [ "$?" -eq "0" ]; then
   source <(kubectl completion zsh)
 fi
+
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
