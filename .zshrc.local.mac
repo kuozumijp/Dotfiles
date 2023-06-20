@@ -38,11 +38,11 @@ export CFLAGS="-I$(brew --prefix sqlite)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix sqlite)/lib $LDFLAGS"
 
 # zplug install (Only environment)
-zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
-zplug "tsub/81ac9b881cf2475977c9cb619021ef3c", from:gist # ssh-fzf.zsh
-zplug "tsub/f4036e067a59b242a161fc3c8a5f01dd", from:gist # history-fzf.zsh
-zplug-stdin
+# zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
+# zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
+# zplug "tsub/81ac9b881cf2475977c9cb619021ef3c", from:gist # ssh-fzf.zsh
+# zplug "tsub/f4036e067a59b242a161fc3c8a5f01dd", from:gist # history-fzf.zsh
+# zplug-stdin
 
 # aliaes
 compdef mosh=ssh
