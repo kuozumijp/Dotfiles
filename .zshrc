@@ -209,25 +209,25 @@ case "${TERM}" in
 esac
 
 # zplug install
-source ~/.zplug/init.zsh
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "zchee/go-zsh-completions", use:src/
-zplug "mollifier/cd-gitroot"
-zplug "b4b4r07/enhancd", use:init.sh
-zplug "zsh-users/zsh-autosuggestions"
+# source ~/.zplug/init.zsh
+# zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "lukechilds/zsh-better-npm-completion", defer:2
+# zplug "zchee/go-zsh-completions", use:src/
+# zplug "mollifier/cd-gitroot"
+# zplug "b4b4r07/enhancd", use:init.sh
+# zplug "zsh-users/zsh-autosuggestions"
 
-function zplug-stdin() {
-  if ! zplug check --verbose; then
-    printf 'Install? [y/N]: '
-    if read -q; then
-      echo; zplug install
-    fi
-  fi
-  
-  zplug load --verbose
-}
+# function zplug-stdin() {
+#   if ! zplug check --verbose; then
+#     printf 'Install? [y/N]: '
+#     if read -q; then
+#       echo; zplug install
+#     fi
+#   fi  
+#   zplug load --verbose
+# }
 
+eval "$(sheldon source)"
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local # 設定ファイルのinclude
 typeset -U path cdpath fpath manpath # 重複PATHの削除
