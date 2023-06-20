@@ -11,6 +11,7 @@ cp ./.*rc ~/
 cp ./.*_profile ~/
 cp -r ./.vim ~/
 cp -r ./.tmux ~/
+cp -r ./.config ~/
 cp ./.gitconfig ~/
 cp ./.tmux.conf ~/
 
