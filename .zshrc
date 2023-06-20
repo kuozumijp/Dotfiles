@@ -2,7 +2,7 @@
 # kuozumijp .zshrc
 #
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:${HOME}/bin:${HOME}/.local/bin
 export GOPATH=$HOME/.go
 
 # color
