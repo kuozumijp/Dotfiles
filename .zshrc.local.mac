@@ -20,6 +20,7 @@ export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/mysql-client/bin:${PATH_ADD}
+export PATH_ADD=${HOME}/.rd/bin:${PATH_ADD}
 export PATH=${PATH_ADD}:${PATH}
 
 export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
