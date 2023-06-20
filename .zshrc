@@ -71,8 +71,13 @@ compinit -u # このあたりを使わないとzsh使ってる意味なし
 setopt autopushd # cdの履歴を表示
 setopt pushd_ignore_dups # 同ディレクトリを履歴に追加しない
 setopt auto_cd # 自動的にディレクトリ移動
+setopt auto_param_slash # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
+setopt mark_dirs # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
 setopt list_packed # リストを詰めて表示
 setopt list_types # 補完一覧ファイル種別表示
+setopt print_eight_bit  #日本語ファイル名等8ビットを通す
+setopt extended_glob  # 拡張グロブで補完(~とか^とか。例えばless *.txt~memo.txt ならmemo.txt 以外の *.txt にマッチ)
+setopt globdots # 明確なドットの指定なしで.から始まるファイルをマッチ
 
 # 履歴
 HISTFILE=$HOME/.zsh_history # historyファイル
