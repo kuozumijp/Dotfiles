@@ -150,7 +150,7 @@ if [ "$?" -eq "0" ]; then
 fi
 
 # kubectl
-COMMAND_BPCTL=`which kubectl`
+COMMAND_KUBECTL=`which kubectl`
 if [ "$?" -eq "0" ]; then
   source <(kubectl completion zsh)
 fi
