@@ -19,6 +19,7 @@ cp ./.tmux.conf ~/
 curl -L https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker > ~/.zsh/completions/_docker
 curl -L https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion > ~/.zsh/completions/_hub
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/plugins/knife/_knife > ~/.zsh/completions/_knife
+curl -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/zsh/_docker-compose > ~/.zsh/completions/_docker-compose > ~/.zsh/completions/_docker-compose
 
 # LS_COLORS install
 curl -L https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-universal > ~/.dircolors
