@@ -66,7 +66,7 @@ setopt no_beep
 setopt nolistbeep
 
 LISTMAX=0 # ウィンドウから溢れるときは尋ねる
-autoload -U compinit # 強力な補完機能
+autoload -Uz compinit # 強力な補完機能
 compinit -u # このあたりを使わないとzsh使ってる意味なし
 setopt autopushd # cdの履歴を表示
 setopt pushd_ignore_dups # 同ディレクトリを履歴に追加しない
