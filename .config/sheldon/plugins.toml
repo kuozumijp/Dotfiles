@@ -48,3 +48,7 @@ gist = 'tsub/81ac9b881cf2475977c9cb619021ef3c'
 
 [plugins.history-fzf]
 gist = 'tsub/f4036e067a59b242a161fc3c8a5f01dd'
+
+[plugins.zsh-kubectl-completion]
+github = 'nnao45/zsh-kubectl-completion'
+apply = ["defer"]
