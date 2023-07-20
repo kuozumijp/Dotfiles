@@ -144,8 +144,6 @@ COMMAND_BPCTL=`which bpctl`
 if [ "$?" -eq "0" ]; then
   export BPCTL_V2_DEFAULT=true
   source <(bpctl completion zsh)
-  autoload -Uz compinit
-  compinit
   compdef _bpctl bpctl
 fi
 
