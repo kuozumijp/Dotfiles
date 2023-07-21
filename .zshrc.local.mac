@@ -16,11 +16,12 @@ export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/.nodebrew/current/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/bin/sqlplus/instantclient_12_1:${PATH_ADD}
 export PATH_ADD=${HOME}/.rbenv/bin:${PATH_ADD}
+export PATH_ADD=${HOME}/.rd/bin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/mysql-client/bin:${PATH_ADD}
-export PATH_ADD=${HOME}/.rd/bin:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/bin:${PATH_ADD}
 export PATH=${PATH_ADD}:${PATH}
 
 export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
@@ -29,7 +30,6 @@ export MANPATH=${MANPATH_ADD}:${MANPATH}
 
 export ANDROID_HOME=${BREW_PREFIX}/share/android-sdk
 export VIMRUNTIME="${BREW_PREFIX}/share/vim/vim*"
-#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix readline)/lib $LDFLAGS"
@@ -37,13 +37,6 @@ export CFLAGS="-I$(brew --prefix openssl)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
 export CFLAGS="-I$(brew --prefix sqlite)/include $CFLAGS"
 export LDFLAGS="-L$(brew --prefix sqlite)/lib $LDFLAGS"
-
-# zplug install (Only environment)
-# zplug "peco/peco", from:gh-r, as:command, use:"*darwin*amd64*"
-# zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
-# zplug "tsub/81ac9b881cf2475977c9cb619021ef3c", from:gist # ssh-fzf.zsh
-# zplug "tsub/f4036e067a59b242a161fc3c8a5f01dd", from:gist # history-fzf.zsh
-# zplug-stdin
 
 # aliaes
 compdef mosh=ssh
@@ -125,9 +118,9 @@ function mosh() {
 
 # peco
 function peco-history-selection() {
-    BUFFER=`history -n 1 | /usr/bin/tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
+  BUFFER=`history -n 1 | /usr/bin/tail -r  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
 }
 
 #zle -N peco-history-selection
@@ -153,5 +146,9 @@ if [ "$?" -eq "0" ]; then
   source <(kubectl completion zsh)
 fi
 
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+# GCP
+COMMAND_GCPSDK=`brew list google-cloud-sdk`
+if [ "$?" -eq "0" ]; then
+  source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
+  source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
+fi
