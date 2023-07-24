@@ -147,7 +147,7 @@ if [ "$?" -eq "0" ]; then
 fi
 
 # GCP
-COMMAND_GCPSDK=`brew list google-cloud-sdk`
+COMMAND_GCPSDK=`brew list google-cloud-sdk 2>/dev/null`
 if [ "$?" -eq "0" ]; then
   source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
   source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
