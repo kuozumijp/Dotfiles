@@ -17,6 +17,7 @@ export PATH_ADD=${HOME}/.nodebrew/current/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/bin/sqlplus/instantclient_12_1:${PATH_ADD}
 export PATH_ADD=${HOME}/.rbenv/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/.rd/bin:${PATH_ADD}
+export PATH_ADD=/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
