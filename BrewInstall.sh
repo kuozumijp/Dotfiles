@@ -54,6 +54,7 @@ brew install librsvg
 brew install nmap
 brew install mas
 brew install multitail
+brew install mkcert
 brew install mongodb-community-shell
 brew install mosh --devel
 brew install mysql-client
