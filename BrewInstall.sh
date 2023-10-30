@@ -79,7 +79,7 @@ brew install yq
 brew install zsh
 
 # .dmg from brew-cask
-brew install --cask --force --no-quarantine 1password
+#brew install --cask --force --no-quarantine 1password
 brew install --cask --force --no-quarantine advancedrestclient
 brew install --cask --force --no-quarantine alfred
 brew install --cask --force --no-quarantine alt-tab
@@ -95,8 +95,8 @@ brew cask install box-drive --force --no-quarantin
 brew cask install box-sync --force --no-quarantine
 #brew install --cask --force --no-quarantine clementine # forWork
 #brew cask install coda
-brew install --cask --force --no-quarantine dash
-brew install --cask --force --no-quarantine day-o
+#brew install --cask --force --no-quarantine dash
+#brew install --cask --force --no-quarantine day-o
 #brew install --cask --force --no-quarantine docker
 brew install --cask --force --no-quarantine dropbox
 brew cask install expo-xde --force --no-quarantine
@@ -112,6 +112,7 @@ brew cask install intel-power-gadget
 brew install --cask --force --no-quarantine intellij-idea
 brew install --cask --force --no-quarantine ip-in-menu-bar
 brew install --cask --force --no-quarantine iterm2
+brew install --cask --force --no-quarantine itsycal
 brew cask install java
 brew cask install adoptopenjdk8-jre
 brew install --cask --force --no-quarantine KeyboardCleanTool
