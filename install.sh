@@ -27,18 +27,13 @@ curl -L https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dirco
 # nodebrew install
 curl -L git.io/nodebrew | perl - setup
 
-# sheldon install
-if cat /etc/shells | grep zsh > /dev/null 2>&1 ; then
-  curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
-fi
-
 # Environment-dependent (etc:.zshrc.local)  install
 if [ "$(uname)" == 'Darwin' ]; then
   cp ./.zshrc.local.mac ~/.zshrc.local
   cp ./.bash_profile.local.mac ~/.bash_profile.local
 
   # homebrew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   # mac Finderの設定変更（隠しファイル表示、タイトルにフルパス表示、拡張子の表示、ディレクトリを先に表示）
   defaults write com.apple.finder AppleShowAllFiles -boolean　true
@@ -49,6 +44,17 @@ if [ "$(uname)" == 'Darwin' ]; then
   
   # BigSurで時計をアナログ表示
   defaults write com.apple.menuextra.clock IsAnalog -bool true
+
+  if [ "$(uname)" == 'x86' ]; then
+    # sheldon install
+    if cat /etc/shells | grep zsh > /dev/null 2>&1 ; then
+      curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
+    else
+      echo "not installed sheldon."
+    fi
+  else
+    echo "not installed sheldon."
+  fi
 
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   cp ./.zshrc.local.rhel ~/.zshrc.local
