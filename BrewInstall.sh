@@ -18,6 +18,7 @@ brew tap AdoptOpenJDK/openjdk
 brew tap johanhaleby/kubetail
 
 # Packages for development
+brew install android-sdk
 brew install asciinema
 brew install automake
 brew install homebrew/core/appledoc
@@ -84,7 +85,7 @@ brew install --cask --force --no-quarantine advancedrestclient
 brew install --cask --force --no-quarantine alfred
 brew install --cask --force --no-quarantine alt-tab
 brew install --cask --force --no-quarantine amazon-music
-brew cask install amazon-photos --force --no-quarantine
+brew install --cask --force --no-quarantine amazon-photos
 brew install --cask --force --no-quarantine android-file-transfer
 brew install --cask --force --no-quarantine appcleaner
 brew cask install background-music --force --no-quarantine
