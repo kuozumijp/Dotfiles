@@ -2,8 +2,8 @@
 # kuozumijp .zshrc.local for mac
 #
 
-eval $(/opt/homebrew/bin/brew shellenv)
 export BREW_PREFIX=$(brew --prefix)
+export PATH_ADD=${BREW_PREFIX}/bin:${PATH_ADD}
 
 # golang
 export GOPATH=$HOME/.go
@@ -11,26 +11,37 @@ export PATH_ADD=$GOPATH/bin:${PATH_ADD}
 
 # java
 #export JAVA_HOME=`/usr/libexec/java_home -v "11"`
-export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+export JAVA_HOME=`/usr/libexec/java_home -v "17"`
 export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
 
-export PATH_ADD=${HOME}/.nodebrew/current/bin:${PATH_ADD}
+# android sdk
+# Get command line tools from https://developer.android.com/studio
+export ANDROID_HOME=${HOME}/android-sdk
+export PATH_ADD=${ANDROID_HOME}/tools:${PATH_ADD}
+export PATH_ADD=${ANDROID_HOME}/platform-tools:${PATH_ADD}
+export PATH_ADD=${ANDROID_HOME}/cmdline-tools/latest/bin:${PATH_ADD}
+export PATH_ADD=${ANDROID_HOME}/cmdline-tools/platform-tools:${PATH_ADD}
+
+# gem
+export GEM_HOME=${HOME}/.gem
+export PATH_ADD=${GEM_HOME}/bin:${PATH_ADD}
+
 export PATH_ADD=${HOME}/bin/sqlplus/instantclient_12_1:${PATH_ADD}
+export PATH_ADD=${HOME}/.nodebrew/current/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/.rbenv/bin:${PATH_ADD}
 export PATH_ADD=${HOME}/.rd/bin:${PATH_ADD}
+export PATH_ADD=${HOME}/.pub-cache/bin:${PATH_ADD}
 export PATH_ADD="/Applications/Visual Studio Code.app/Contents/Resources/app/bin":${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/mysql-client/bin:${PATH_ADD}
-export PATH_ADD=${BREW_PREFIX}/bin:${PATH_ADD}
 export PATH=${PATH_ADD}:${PATH}
 
 export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
 export MANPATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnuman
 export MANPATH=${MANPATH_ADD}:${MANPATH}
 
-export ANDROID_HOME=${BREW_PREFIX}/share/android-sdk
 export VIMRUNTIME="${BREW_PREFIX}/share/vim/vim*"
 
 export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
