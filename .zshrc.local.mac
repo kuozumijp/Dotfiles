@@ -153,3 +153,5 @@ if [ "$?" -eq "0" ]; then
   source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
   source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
 fi
+
+eval "$(sheldon source)"
