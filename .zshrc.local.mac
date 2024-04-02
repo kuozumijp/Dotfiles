@@ -2,8 +2,8 @@
 # kuozumijp .zshrc.local for mac
 #
 
+eval $(/opt/homebrew/bin/brew shellenv)
 export BREW_PREFIX=$(brew --prefix)
-export PATH_ADD=${BREW_PREFIX}/bin:${PATH_ADD}
 
 # golang
 export GOPATH=$HOME/.go
