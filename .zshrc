@@ -133,8 +133,8 @@ else
 fi
 alias rm="rm -i"
 alias rmd="rm -ir"
-alias vi="TERM=xterm-color vim"
-alias vim="TERM=xterm-color vim"
+alias vi="TERM=xterm-256color vim"
+alias vim="TERM=xterm-256color vim"
 alias make="gmake"
 alias svn="env LANG=C svn"
 
