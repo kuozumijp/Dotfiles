@@ -44,7 +44,7 @@ export LDFLAGS="-L$(brew --prefix sqlite)/lib $LDFLAGS"
 compdef mosh=ssh
 
 alias vi="TERM=xterm-256color ${BREW_PREFIX}/bin/vim"
-alias vi="TERM=xterm-256color ${BREW_PREFIX}/bin/vim"
+alias vim="TERM=xterm-256color ${BREW_PREFIX}/bin/vim"
 alias grep="${BREW_PREFIX}/bin/ggrep"
 alias ls="${BREW_PREFIX}/bin/gls -F --color=auto"
 alias ll="${BREW_PREFIX}/bin/gls -laF --color=auto"
