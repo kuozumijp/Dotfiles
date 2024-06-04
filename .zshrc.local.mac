@@ -15,8 +15,7 @@ export GOPATH=$HOME/.go
 export PATH_ADD=$GOPATH/bin:${PATH_ADD}
 
 # java
-#export JAVA_HOME=`/usr/libexec/java_home -v "11"`
-export JAVA_HOME=`/usr/libexec/java_home -v "17"`
+export JAVA_HOME=`/usr/libexec/java_home -v "21"`
 export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
 
 # android sdk
@@ -162,6 +161,12 @@ fi
 COMMAND_KUBECTL=`which kubectl`
 if [ "$?" -eq "0" ]; then
   source <(kubectl completion zsh)
+fi
+
+#flctl
+COMMAND_FLCTL=`which flctl`
+if [ "$?" -eq "0" ]; then
+  source <(flctl completion zsh)
 fi
 
 # GCP
