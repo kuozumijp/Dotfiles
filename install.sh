@@ -35,11 +35,32 @@ if [ "$(uname)" == 'Darwin' ]; then
   # homebrew
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-  # mac Finderの設定変更（隠しファイル表示、タイトルにフルパス表示、拡張子の表示、ディレクトリを先に表示）
+  # mac Finderの設定変更
+  # 隠しファイル表示
   defaults write com.apple.finder AppleShowAllFiles -boolean　true
+  # タイトルにフルパス表示
   defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
+  # 拡張子の表示
   defaults write -g AppleShowAllExtensions -boolean true
+  # ディレクトリを先に表示
   defaults write com.apple.finder _FXSortFoldersFirst -boolean true
+  # ファイルを開くときのアニメーションを無効にする
+  defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+  # USB やネットワークストレージに .DS_Store ファイルを作成しない
+  defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+  defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+  # フォルダを開くときのアニメーションを無効にする
+  defaults write com.apple.finder AnimateWindowZoom -bool false
+  # 拡張子変更時の警告を無効化する
+  defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+  # Finder を終了させる項目を追加する
+  defaults write com.apple.Finder QuitMenuItem -bool true
+  # パスバーを表示する
+  defaults write com.apple.finder ShowPathbar -bool true
+  # ステータスバーを表示する
+  defaults write com.apple.finder ShowStatusBar -bool true
+  # タブバーを表示する
+  defaults write com.apple.finder ShowTabView -bool true
   killall Finder
   
   # BigSurで時計をアナログ表示
