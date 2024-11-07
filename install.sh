@@ -35,6 +35,16 @@ if [ "$(uname)" == 'Darwin' ]; then
   # homebrew
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+  # mac Dockの設定変更
+  # Dockを左に
+  defaults write com.apple.dock orientation -string right
+  defaults write com.apple.dock tilesize -int 40
+  # 最近使ったアプリアイコンを表示させない
+  defaults write com.apple.dock show-recents -bool false
+  # アプリウィンドウを隠すとアイコンを透過
+  defaults write com.apple.dock showhidden -bool true
+  killall Dock
+
   # mac Finderの設定変更
   # 隠しファイル表示
   defaults write com.apple.finder AppleShowAllFiles -boolean　true
