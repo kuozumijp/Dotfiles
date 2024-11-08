@@ -38,7 +38,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   # mac Dockの設定変更
   # Dockを左に
   defaults write com.apple.dock orientation -string right
-  defaults write com.apple.dock tilesize -int 40
+  defaults write com.apple.dock tilesize -int 48
   # 最近使ったアプリアイコンを表示させない
   defaults write com.apple.dock show-recents -bool false
   # アプリウィンドウを隠すとアイコンを透過
