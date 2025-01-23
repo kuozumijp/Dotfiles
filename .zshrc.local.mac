@@ -182,4 +182,9 @@ if [ "$?" -eq "0" ]; then
   source "${BREW_PREFIX}/etc/bash_completion.d/az"
 fi
 
+# IntelliJ
+if [ -z “$INTELLIJ_ENVIRONMENT_READER” ]; then
+  source ~/.zshrc
+fi
+
 eval "$(sheldon source)"
