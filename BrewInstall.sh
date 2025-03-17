@@ -12,7 +12,6 @@ brew tap dart-lang/dart
 brew tap someposer/homebrew-mmbd
 brew tap universal-ctags/universal-ctags
 brew tap sanemat/font
-#brew tap caskroom/fonts
 brew tap zarashi-dev/weizen
 brew tap AdoptOpenJDK/openjdk
 brew tap johanhaleby/kubetail
@@ -32,6 +31,7 @@ brew install coreutils
 brew install dart
 brew install --HEAD universal-ctags
 brew install ffmpeg
+brew install flashspace
 brew install flutter
 brew install flow
 brew install --use-gcc fontforge
@@ -80,7 +80,6 @@ brew install yq
 brew install zsh
 
 # .dmg from brew-cask
-#brew install --cask --force --no-quarantine 1password
 brew install --cask --force --no-quarantine advancedrestclient
 brew install --cask --force --no-quarantine alfred
 brew install --cask --force --no-quarantine alt-tab
@@ -88,50 +87,23 @@ brew install --cask --force --no-quarantine amazon-music
 brew install --cask --force --no-quarantine amazon-photos
 brew install --cask --force --no-quarantine android-file-transfer
 brew install --cask --force --no-quarantine appcleaner
-brew cask install background-music --force --no-quarantine
 brew install --cask --force --no-quarantine bartender
 brew install --cask --force --no-quarantine bettertouchtool
-brew cask install blackhole --force --no-quarantine
-brew cask install box-drive --force --no-quarantin
-brew cask install box-sync --force --no-quarantine
 #brew install --cask --force --no-quarantine clementine # forWork
-#brew cask install coda
 #brew install --cask --force --no-quarantine dash
-#brew install --cask --force --no-quarantine day-o
 #brew install --cask --force --no-quarantine docker
 brew install --cask --force --no-quarantine dropbox
-brew cask install expo-xde --force --no-quarantine
-brew cask install firefox --force --no-quarantine
-brew cask install fluid --force --no-quarantine
-brew cask install flume --force --no-quarantine
-#brew install --cask --force --no-quarantine gas-mask
 brew install --cask --force --no-quarantine genymotion
 brew install --cask --force --no-quarantine google-japanese-ime
-brew cask install ifunbox
-brew cask install imageoptim
-brew cask install intel-power-gadget
 brew install --cask --force --no-quarantine intellij-idea
 brew install --cask --force --no-quarantine ip-in-menu-bar
 brew install --cask --force --no-quarantine iterm2
 brew install --cask --force --no-quarantine itsycal
-brew cask install java
-brew cask install adoptopenjdk8-jre
 brew install --cask --force --no-quarantine KeyboardCleanTool
-#brew cask install kindle
 brew install --cask --force --no-quarantine kitematic
-brew cask install macs-fan-control
-brew cask install maczip4win
 brew install --cask --force --no-quarantine michaelvillar-timer
 brew install --cask --force --no-quarantine mongodb-compass
-brew cask install font-myrica
-brew cask install font-myricam
-brew install --cask --force --no-quarantine mysqlworkbench
-brew cask install notifyr
 brew install --cask --force --no-quarantine rancher
-#brew cask install soundflower --force --no-quarantine
-brew cask install caskroom/homebrew-cask/sqlitebrowser
-brew cask install safari-technology-preview --force --no-quarantine
-brew cask install squidman --force --no-quarantine
 brew install --cask --force --no-quarantine stoplight-studio
 brew install --cask --force --no-quarantine switchhosts
 #brew install --cask --force --no-quarantine totalfinder
