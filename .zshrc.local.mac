@@ -149,6 +149,11 @@ if [ "$?" -eq "0" ]; then
   eval "$(rbenv init - zsh)"
 fi
 
+# python venv
+if [ -f "${HOME}/.venv/bin/activate" ]; then
+  source "${HOME}/.venv/bin/activate"
+fi
+
 # bpctl
 COMMAND_BPCTL=`which bpctl`
 if [ "$?" -eq "0" ]; then
