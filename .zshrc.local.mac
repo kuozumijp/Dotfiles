@@ -19,13 +19,15 @@ JAVA_HOME_TMP=`/usr/libexec/java_home -v "21" 2>/dev/null`
 if [ -n "$JAVA_HOME_TMP" ]; then
   export JAVA_HOME="$JAVA_HOME_TMP"
   export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
+  export PATH_ADD=${BREW_PREFIX}/opt/openjdk/bin:${PATH_ADD}
 fi
 unset JAVA_HOME_TMP
 
 # android sdk
 # Get command line tools from https://developer.android.com/studio
-export ANDROID_HOME=${HOME}/android-sdk
+export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH_ADD=${ANDROID_HOME}/tools:${PATH_ADD}
+export PATH_ADD=${ANDROID_HOME}/emulator:${PATH_ADD}
 export PATH_ADD=${ANDROID_HOME}/platform-tools:${PATH_ADD}
 export PATH_ADD=${ANDROID_HOME}/cmdline-tools/latest/bin:${PATH_ADD}
 export PATH_ADD=${ANDROID_HOME}/cmdline-tools/platform-tools:${PATH_ADD}
@@ -44,6 +46,7 @@ export PATH_ADD=${BREW_PREFIX}/share/git-core/contrib/diff-highlight:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnubin:${PATH_ADD}
 export PATH_ADD=${BREW_PREFIX}/opt/mysql-client/bin:${PATH_ADD}
+export PATH_ADD=${BREW_PREFIX}/opt/libpq/bin:${PATH_ADD}
 export PATH=${PATH_ADD}:${PATH}
 
 export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
