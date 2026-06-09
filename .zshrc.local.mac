@@ -53,7 +53,7 @@ export MANPATH_ADD=${BREW_PREFIX}/opt/gnu-sed/libexec/gnuman
 export MANPATH_ADD=${BREW_PREFIX}/opt/grep/libexec/gnuman
 export MANPATH=${MANPATH_ADD}:${MANPATH}
 
-VIMRUNTIME=$(echo ${BREW_PREFIX}/share/vim/vim*/)
+VIMRUNTIME=$(echo ${BREW_PREFIX}/share/vim/vim*)
 
 export CFLAGS="-I${BREW_PREFIX}/opt/readline/include -I${BREW_PREFIX}/opt/openssl/include -I${BREW_PREFIX}/opt/sqlite/include $CFLAGS"
 export LDFLAGS="-L${BREW_PREFIX}/opt/readline/lib -L${BREW_PREFIX}/opt/openssl/lib -L${BREW_PREFIX}/opt/sqlite/lib $LDFLAGS"
