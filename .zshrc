@@ -37,6 +37,7 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+RPS1=$RPROMPT # zsh-deferがRPS1未設定時に空にするのを防ぐ
 
 setopt transient_rprompt # 右側まで入力がきたら時間を消す
 setopt prompt_subst
