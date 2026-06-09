@@ -15,8 +15,12 @@ export GOPATH=$HOME/.go
 export PATH_ADD=$GOPATH/bin:${PATH_ADD}
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v "21"`
-export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
+JAVA_HOME_TMP=`/usr/libexec/java_home -v "21" 2>/dev/null`
+if [ -n "$JAVA_HOME_TMP" ]; then
+  export JAVA_HOME="$JAVA_HOME_TMP"
+  export PATH_ADD=${JAVA_HOME}/bin:${PATH_ADD}
+fi
+unset JAVA_HOME_TMP
 
 # android sdk
 # Get command line tools from https://developer.android.com/studio
@@ -48,12 +52,8 @@ export MANPATH=${MANPATH_ADD}:${MANPATH}
 
 export VIMRUNTIME="${BREW_PREFIX}/share/vim/vim*"
 
-export CFLAGS="-I$(brew --prefix readline)/include $CFLAGS"
-export LDFLAGS="-L$(brew --prefix readline)/lib $LDFLAGS"
-export CFLAGS="-I$(brew --prefix openssl)/include $CFLAGS"
-export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
-export CFLAGS="-I$(brew --prefix sqlite)/include $CFLAGS"
-export LDFLAGS="-L$(brew --prefix sqlite)/lib $LDFLAGS"
+export CFLAGS="-I${BREW_PREFIX}/opt/readline/include -I${BREW_PREFIX}/opt/openssl/include -I${BREW_PREFIX}/opt/sqlite/include $CFLAGS"
+export LDFLAGS="-L${BREW_PREFIX}/opt/readline/lib -L${BREW_PREFIX}/opt/openssl/lib -L${BREW_PREFIX}/opt/sqlite/lib $LDFLAGS"
 
 # aliaes
 compdef mosh=ssh
@@ -170,15 +170,13 @@ if [ "$?" -eq "0" ]; then
 fi
 
 # GCP
-COMMAND_GCPSDK=`brew list google-cloud-sdk 2>/dev/null`
-if [ "$?" -eq "0" ]; then
+if [ -d "${BREW_PREFIX}/share/google-cloud-sdk" ]; then
   source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
   source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
 # azure
-COMMAND_AZURECLI=`brew list azure-cli 2>/dev/null`
-if [ "$?" -eq "0" ]; then
+if [ -f "${BREW_PREFIX}/etc/bash_completion.d/az" ]; then
   source "${BREW_PREFIX}/etc/bash_completion.d/az"
 fi
 
